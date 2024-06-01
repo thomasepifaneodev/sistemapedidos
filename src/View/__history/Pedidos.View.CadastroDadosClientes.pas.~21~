@@ -1,0 +1,55 @@
+unit Pedidos.View.CadastroDadosClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Pedidos.View.CadastroPrincipalDados,
+  Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB, Vcl.Mask, Vcl.DBCtrls, FireDAC.Stan.Intf,
+  FireDAC.Comp.Client, FireDAC.Stan.Option, FireDAC.Stan.Error,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, Pedidos.Model.Conexao;
+
+type
+  TfrmCadastroDadosClientes = class(TfrmCadastro)
+    editCodigo: TLabeledEdit;
+    editNome: TLabeledEdit;
+    editTelefone: TLabeledEdit;
+    editEmail: TLabeledEdit;
+    editEndereco: TLabeledEdit;
+    fdCommand: TFDCommand;
+    procedure btnSalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroDadosClientes: TfrmCadastroDadosClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadastroDadosClientes.btnSalvarClick(Sender: TObject);
+begin
+  inherited;
+  fdCommand.CommandText.Add('INSERT INTO clientes (nome, telefone, endereco, email) VALUES(');
+  fdCommand.CommandText.Add(''''+ editNome.Text +''',');
+  fdCommand.CommandText.Add(''''+ editTelefone.Text +''',');
+  fdCommand.CommandText.Add(''''+ editEndereco.Text +''',');
+  fdCommand.CommandText.Add(''''+ editEmail.Text +''');');
+
+  //ShowMessage(fdCommand.CommandText.GetText);
+  try
+  fdCommand.Open();
+  fdCommand.Close;
+  except on e: Exception do
+  begin
+  ShowMessage(e.Message);
+  end;
+  end;
+
+end;
+end.

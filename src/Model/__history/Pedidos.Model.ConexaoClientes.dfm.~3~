@@ -1,0 +1,13 @@
+object dmDadosClientes: TdmDadosClientes
+  Height = 480
+  Width = 640
+  object fdQueryClientes: TFDQuery
+    Left = 296
+    Top = 168
+  end
+  object dataSourceClientes: TDataSource
+    DataSet = fdQueryClientes
+    Left = 400
+    Top = 168
+  end
+end

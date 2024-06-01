@@ -1,0 +1,17 @@
+object dmDados: TdmDados
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Left = 112
+    Top = 160
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    Left = 224
+    Top = 160
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 320
+    Top = 160
+  end
+end

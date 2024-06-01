@@ -1,0 +1,50 @@
+object frmCadastro: TfrmCadastro
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'frmCadastro'
+  ClientHeight = 562
+  ClientWidth = 828
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object pnlBottom: TPanel
+    Left = 0
+    Top = 504
+    Width = 828
+    Height = 58
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitLeft = -200
+    ExplicitTop = 384
+    object btnSalvar: TButton
+      Left = 11
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Salvar'
+      TabOrder = 0
+    end
+    object btnEditar: TButton
+      Left = 117
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Editar'
+      TabOrder = 1
+    end
+    object btnSair: TButton
+      Left = 717
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Sair'
+      TabOrder = 2
+    end
+  end
+end

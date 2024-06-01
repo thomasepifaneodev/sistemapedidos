@@ -1,0 +1,98 @@
+inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
+  Caption = 'Cadastro de Clientes'
+  TextHeight = 15
+  inherited pnlBottom: TPanel
+    inherited btn1Salvar: TSpeedButton
+      OnClick = btn1SalvarClick
+    end
+  end
+  inherited pnlTop: TPanel
+    object lblCodigo: TDBText
+      Left = 616
+      Top = 0
+      Width = 144
+      Height = 49
+      Alignment = taRightJustify
+      DataField = 'id'
+      DataSource = dmDados.dataSourceClientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowFrame
+      Font.Height = -32
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edtNome: TDBEdit
+      Left = 82
+      Top = 105
+      Width = 600
+      Height = 25
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      DataField = 'nome'
+      DataSource = dmDados.dataSourceClientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Malgun Gothic'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object edtTelefone: TDBEdit
+      Left = 82
+      Top = 184
+      Width = 600
+      Height = 25
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      DataField = 'telefone'
+      DataSource = dmDados.dataSourceClientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Malgun Gothic'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object edtEmail: TDBEdit
+      Left = 82
+      Top = 264
+      Width = 600
+      Height = 25
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      DataField = 'email'
+      DataSource = dmDados.dataSourceClientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Malgun Gothic'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object edtEndereco: TDBMemo
+      Left = 82
+      Top = 326
+      Width = 600
+      Height = 51
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      DataField = 'endereco'
+      DataSource = dmDados.dataSourceClientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = '@Malgun Gothic'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+end

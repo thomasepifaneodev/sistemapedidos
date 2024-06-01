@@ -1,0 +1,40 @@
+unit Pedidos.View.CadastroVisualClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Pedidos.View.CadastroPrincipal, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Pedidos.View.CadastroDadosClientes, Pedidos.Model.ConexaoClientes,
+  FireDAC.Comp.Client;
+
+type
+  TfrmCadastroClientes = class(TfrmCadastroPrincipal)
+    procedure dbResultadosDblClick(Sender: TObject);
+    procedure btnExibirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroClientes: TfrmCadastroClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadastroClientes.btnExibirClick(Sender: TObject);
+begin
+  inherited;
+  dbResultadosDblClick(Sender);
+end;
+
+procedure TfrmCadastroClientes.dbResultadosDblClick(Sender: TObject);
+begin
+  inherited;
+  frmCadastroDadosClientes.ShowModal();
+end;
+
+end.

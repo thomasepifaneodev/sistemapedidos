@@ -1,0 +1,68 @@
+object dmDados: TdmDados
+  OnCreate = DataModuleCreate
+  Height = 480
+  Width = 883
+  object fdConnection: TFDConnection
+    Params.Strings = (
+      'Database=base_pedidos'
+      'User_Name=postgres'
+      'Password=postzeus2011'
+      'Server=127.0.0.1'
+      'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 24
+  end
+  object fdPgLink: TFDPhysPgDriverLink
+    VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\exe'
+    Left = 112
+    Top = 24
+  end
+  object fdQueryClientes: TFDQuery
+    Connection = fdConnection
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'clientes_id_seq'
+    UpdateOptions.AutoIncFields = 'id'
+    SQL.Strings = (
+      'SELECT * FROM clientes')
+    Left = 192
+    Top = 24
+    object fdQueryClientesid: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object fdQueryClientesnome: TWideStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 80
+    end
+    object fdQueryClientestelefone: TWideStringField
+      FieldName = 'telefone'
+      Origin = 'telefone'
+      Size = 30
+    end
+    object fdQueryClientesendereco: TWideStringField
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Size = 100
+    end
+    object fdQueryClientesemail: TWideStringField
+      FieldName = 'email'
+      Origin = 'email'
+      Size = 80
+    end
+  end
+  object dataSourceClientes: TDataSource
+    DataSet = fdQueryClientes
+    Left = 424
+    Top = 24
+  end
+  object fdQueryInserirClientes: TFDQuery
+    Connection = fdConnection
+    Left = 304
+    Top = 24
+  end
+end

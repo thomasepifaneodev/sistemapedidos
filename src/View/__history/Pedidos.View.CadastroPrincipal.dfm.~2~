@@ -1,0 +1,23 @@
+object frmCadastroPrincipal: TfrmCadastroPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Cadastros'
+  ClientHeight = 562
+  ClientWidth = 828
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object TPanel
+    Left = 0
+    Top = 512
+    Width = 828
+    Height = 50
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+  end
+end

@@ -1,0 +1,81 @@
+﻿object frmCadastroPrincipal: TfrmCadastroPrincipal
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Cadastros'
+  ClientHeight = 562
+  ClientWidth = 828
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object pnlBottom: TPanel
+    Left = 0
+    Top = 504
+    Width = 828
+    Height = 58
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    object btnNovo: TButton
+      Left = 11
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Novo'
+      TabOrder = 0
+    end
+    object btnExibir: TButton
+      Left = 117
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Exibir'
+      TabOrder = 1
+    end
+    object btnSair: TButton
+      Left = 717
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Sair'
+      TabOrder = 2
+    end
+    object btnExcluir: TButton
+      Left = 223
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Excluir'
+      TabOrder = 3
+    end
+    object btnRelatório: TButton
+      Left = 611
+      Top = 15
+      Width = 100
+      Height = 30
+      Caption = 'Relat'#243'rio'
+      TabOrder = 4
+    end
+  end
+  object edtSource: TEdit
+    Left = 11
+    Top = 16
+    Width = 700
+    Height = 23
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    Text = 'edtSource'
+  end
+end

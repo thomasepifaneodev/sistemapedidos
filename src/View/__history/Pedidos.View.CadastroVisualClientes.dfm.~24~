@@ -1,0 +1,40 @@
+inherited frmCadastroClientes: TfrmCadastroClientes
+  Caption = 'Cadastro de Clientes'
+  ClientWidth = 828
+  TextHeight = 15
+  inherited pnlBottom: TPanel
+    Width = 828
+    inherited btnNovo: TButton
+      OnClick = btnNovoClick
+    end
+    inherited btnExibir: TButton
+      OnClick = btnExibirClick
+    end
+  end
+  inherited dbResultados: TDBGrid
+    DataSource = dmDadosClientes.dataSourceClientes
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ReadOnly = True
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'C'#243'digo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Title.Caption = 'Nome'
+        Width = 480
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'telefone'
+        Title.Caption = 'Telefone'
+        Width = 120
+        Visible = True
+      end>
+  end
+end

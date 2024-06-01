@@ -1,0 +1,56 @@
+unit Pedidos.View.CadastroVisualClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Pedidos.View.CadastroPrincipal, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Pedidos.View.CadastroDadosClientes, Pedidos.Model.ConexaoClientes,
+  FireDAC.Comp.Client;
+
+type
+  TfrmCadastroClientes = class(TfrmCadastroPrincipal)
+    procedure btnExibirClick(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroClientes: TfrmCadastroClientes;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TfrmCadastroClientes.btnNovoClick(Sender: TObject);
+begin
+  inherited;
+  if not dmDadosClientes.fdQueryClientes.Active then
+  dmDadosClientes.fdQueryClientes.Open;
+
+  dmDadosClientes.fdQueryClientes.Insert;
+
+  frmCadastroDadosClientes := TfrmCadastroDadosClientes.Create(Self);
+  try
+    if frmCadastroDadosClientes.ShowModal = mrOk then
+    begin
+      dmDadosClientes.fdQueryClientes.Post;
+      dmDadosClientes.fdQueryClientes.ApplyUpdates(0);
+      dmDadosClientes.fdQueryClientes.Close;
+    end
+    else
+    begin
+      dmDadosClientes.fdQueryClientes.Cancel;
+    end;
+  finally
+    frmCadastroDadosClientes.Free;
+  end;
+end;
+
+
+end.

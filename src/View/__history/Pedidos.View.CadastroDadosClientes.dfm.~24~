@@ -1,0 +1,167 @@
+inherited frmCadastroDadosClientes: TfrmCadastroDadosClientes
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 512
+  ClientWidth = 788
+  Position = poScreenCenter
+  ExplicitWidth = 800
+  ExplicitHeight = 550
+  TextHeight = 15
+  object Label1: TLabel [0]
+    Left = 19
+    Top = 64
+    Width = 16
+    Height = 25
+    Caption = 'id'
+    FocusControl = DBEdit1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel [1]
+    Left = 168
+    Top = 64
+    Width = 49
+    Height = 25
+    Caption = 'nome'
+    FocusControl = DBEdit2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel [2]
+    Left = 19
+    Top = 152
+    Width = 71
+    Height = 25
+    Caption = 'telefone'
+    FocusControl = DBEdit3
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel [3]
+    Left = 19
+    Top = 238
+    Width = 79
+    Height = 25
+    Caption = 'endereco'
+    FocusControl = DBEdit4
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel [4]
+    Left = 288
+    Top = 152
+    Width = 47
+    Height = 25
+    Caption = 'email'
+    FocusControl = DBEdit5
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  inherited pnlBottom: TPanel
+    Top = 454
+    Width = 788
+    ExplicitTop = 453
+    ExplicitWidth = 784
+    inherited btnSalvar: TButton
+      OnClick = btnSalvarClick
+    end
+    inherited btnSair: TButton
+      Left = 677
+      ExplicitLeft = 677
+    end
+  end
+  object DBEdit1: TDBEdit
+    Left = 19
+    Top = 91
+    Width = 100
+    Height = 29
+    DataField = 'id'
+    DataSource = dmDadosClientes.dataSourceClientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 168
+    Top = 91
+    Width = 600
+    Height = 29
+    DataField = 'nome'
+    DataSource = dmDadosClientes.dataSourceClientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 19
+    Top = 265
+    Width = 749
+    Height = 29
+    DataField = 'endereco'
+    DataSource = dmDadosClientes.dataSourceClientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    Left = 288
+    Top = 179
+    Width = 480
+    Height = 29
+    DataField = 'email'
+    DataSource = dmDadosClientes.dataSourceClientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    Left = 19
+    Top = 179
+    Width = 250
+    Height = 29
+    DataField = 'telefone'
+    DataSource = dmDadosClientes.dataSourceClientes
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+  end
+end

@@ -1,0 +1,154 @@
+inherited frmCadastroDadosClientes: TfrmCadastroDadosClientes
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 512
+  ClientWidth = 788
+  Position = poScreenCenter
+  ExplicitWidth = 800
+  ExplicitHeight = 550
+  TextHeight = 15
+  inherited pnlBottom: TPanel
+    Top = 454
+    Width = 788
+    TabOrder = 4
+    ExplicitTop = 453
+    ExplicitWidth = 784
+    inherited btnSalvar: TButton
+      OnClick = btnSalvarClick
+    end
+    inherited btnSair: TButton
+      Left = 677
+      ExplicitLeft = 677
+    end
+  end
+  object editCodigo: TLabeledEdit
+    Left = 103
+    Top = 80
+    Width = 137
+    Height = 33
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    EditLabel.Width = 54
+    EditLabel.Height = 21
+    EditLabel.Caption = 'Codigo'
+    EditLabel.Font.Charset = ANSI_CHARSET
+    EditLabel.Font.Color = clWindowText
+    EditLabel.Font.Height = -16
+    EditLabel.Font.Name = 'Segoe UI Semibold'
+    EditLabel.Font.Style = [fsBold]
+    EditLabel.ParentFont = False
+    Enabled = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    Text = ''
+  end
+  object editNome: TLabeledEdit
+    Left = 327
+    Top = 80
+    Width = 358
+    Height = 33
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    EditLabel.Width = 45
+    EditLabel.Height = 21
+    EditLabel.Caption = 'Nome'
+    EditLabel.Font.Charset = ANSI_CHARSET
+    EditLabel.Font.Color = clWindowText
+    EditLabel.Font.Height = -16
+    EditLabel.Font.Name = 'Segoe UI Semibold'
+    EditLabel.Font.Style = [fsBold]
+    EditLabel.ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    Text = ''
+  end
+  object editTelefone: TLabeledEdit
+    Left = 103
+    Top = 200
+    Width = 250
+    Height = 33
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    EditLabel.Width = 63
+    EditLabel.Height = 21
+    EditLabel.Caption = 'Telefone'
+    EditLabel.Font.Charset = ANSI_CHARSET
+    EditLabel.Font.Color = clWindowText
+    EditLabel.Font.Height = -16
+    EditLabel.Font.Name = 'Segoe UI Semibold'
+    EditLabel.Font.Style = [fsBold]
+    EditLabel.ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    Text = ''
+  end
+  object editEmail: TLabeledEdit
+    Left = 435
+    Top = 200
+    Width = 250
+    Height = 33
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    EditLabel.Width = 44
+    EditLabel.Height = 21
+    EditLabel.Caption = 'E-mail'
+    EditLabel.Font.Charset = ANSI_CHARSET
+    EditLabel.Font.Color = clWindowText
+    EditLabel.Font.Height = -16
+    EditLabel.Font.Name = 'Segoe UI Semibold'
+    EditLabel.Font.Style = [fsBold]
+    EditLabel.ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    Text = ''
+  end
+  object editEndereco: TLabeledEdit
+    Left = 103
+    Top = 328
+    Width = 300
+    Height = 33
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    BorderStyle = bsNone
+    EditLabel.Width = 69
+    EditLabel.Height = 21
+    EditLabel.Caption = 'Endere'#231'o'
+    EditLabel.Font.Charset = ANSI_CHARSET
+    EditLabel.Font.Color = clWindowText
+    EditLabel.Font.Height = -16
+    EditLabel.Font.Name = 'Segoe UI Semibold'
+    EditLabel.Font.Style = [fsBold]
+    EditLabel.ParentFont = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    Text = ''
+  end
+end

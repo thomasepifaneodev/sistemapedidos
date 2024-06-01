@@ -1,0 +1,54 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'T SISTEMAS'
+  ClientHeight = 681
+  ClientWidth = 1064
+  Color = clBtnFace
+  Constraints.MinHeight = 720
+  Constraints.MinWidth = 1080
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Menu = mainMenu
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  StyleName = 'Windows'
+  TextHeight = 15
+  object mainMenu: TMainMenu
+    BiDiMode = bdLeftToRight
+    OwnerDraw = True
+    ParentBiDiMode = False
+    Left = 24
+    Top = 8
+    object itemCadastro: TMenuItem
+      Caption = 'Cadastros'
+      object cadClientes: TMenuItem
+        Caption = 'Clientes'
+      end
+      object cadProdutos: TMenuItem
+        Caption = 'Produtos'
+      end
+      object cadGrupos: TMenuItem
+        Caption = 'Grupos'
+      end
+    end
+    object itemPedidos: TMenuItem
+      Caption = 'Pedidos'
+      object pedVendas: TMenuItem
+        Caption = 'Vendas'
+      end
+    end
+    object itemUsuarios: TMenuItem
+      Caption = 'Usu'#225'rios'
+      object userCadastros: TMenuItem
+        Caption = 'Cadastros'
+      end
+      object userPermissoes: TMenuItem
+        Caption = 'Permiss'#245'es'
+      end
+    end
+  end
+end

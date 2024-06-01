@@ -1,0 +1,25 @@
+unit Pedidos.View.CadastroVisualProdutos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Pedidos.View.CadastroPrincipal, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmCadastroPrincipal1 = class(TfrmCadastroPrincipal)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroPrincipal1: TfrmCadastroPrincipal1;
+
+implementation
+
+{$R *.dfm}
+
+end.

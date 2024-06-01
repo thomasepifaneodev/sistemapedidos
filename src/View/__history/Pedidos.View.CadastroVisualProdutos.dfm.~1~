@@ -1,0 +1,4 @@
+inherited frmCadastroPrincipal1: TfrmCadastroPrincipal1
+  Caption = 'frmCadastroPrincipal1'
+  TextHeight = 15
+end
