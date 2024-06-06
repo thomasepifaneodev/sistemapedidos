@@ -1,0 +1,22 @@
+object dmDadosClientes: TdmDadosClientes
+  Height = 128
+  Width = 534
+  object fdConnectionClientes: TFDConnection
+    Left = 88
+    Top = 40
+  end
+  object fdQueryClientes: TFDQuery
+    Connection = fdConnectionClientes
+    Left = 200
+    Top = 40
+  end
+  object fdTransactionClientes: TFDTransaction
+    Connection = fdConnectionClientes
+    Left = 312
+    Top = 40
+  end
+  object dataSourceClientes: TDataSource
+    Left = 432
+    Top = 40
+  end
+end

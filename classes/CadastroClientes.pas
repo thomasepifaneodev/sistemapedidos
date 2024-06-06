@@ -2,36 +2,56 @@ unit CadastroClientes;
 
 interface
 
-uses TSistema.Model.Conexao.Principal, Vcl.Dialogs, System.SysUtils;
+uses TSistema.Model.Conexao.Principal, Vcl.Dialogs, System.SysUtils, Data.DB;
 
-procedure InserirClientes(Nome, Telefone, Endereco, Email : String);
+procedure InserirClientes;
+procedure ConsultarClientes;
+procedure ExcluirClientes;
+procedure GravarAlteracoes;
+procedure CancelarTransacao;
 
 implementation
 
-procedure InserirClientes(Nome, Telefone, Endereco, Email : String);
+procedure InserirClientes;
 begin
-try
-    dmDados.fdConnection.StartTransaction;
-    dmDados.fdQueryInserirClientes.SQL.Add('SELECT * FROM inserir_cliente(:p_nome, :p_telefone, :p_endereco, :p_email);') ;
-
-    dmDados.fdQueryInserirClientes.Params.ParamByName('p_nome').AsString := Nome;
-    dmDados.fdQueryInserirClientes.Params.ParamByName('p_telefone').AsString := Telefone;
-    dmDados.fdQueryInserirClientes.Params.ParamByName('p_endereco').AsString := Endereco;
-    dmDados.fdQueryInserirClientes.Params.ParamByName('p_email').AsString := Email;
-
-    dmDados.fdQueryInserirClientes.Open;
-
-    dmDados.fdConnection.Commit;
-
-    ShowMessage('Dados salvos com sucesso!');
-  except
-    on E: Exception do
-    begin
-      dmDados.fdConnection.Rollback;
-      ShowMessage('Erro ao inserir cliente: ' + E.Message);
-    end;
+  if not (dmDadosPrincipal.fdQueryClientes.State in [dsEdit, dsInsert]) then
+  begin
+    dmDadosPrincipal.fdTransactionClientes.StartTransaction;
+    dmDadosPrincipal.fdQueryClientes.Insert;
   end;
 end;
+
+procedure ConsultarClientes;
+begin
+  dmDadosPrincipal.fdQueryClientes.Open();
+end;
+
+procedure ExcluirClientes;
+begin
+  dmDadosPrincipal.fdTransactionClientes.StartTransaction;
+  dmDadosPrincipal.fdQueryClientes.Delete;
+  dmDadosPrincipal.fdTransactionClientes.CommitRetaining ;
+end;
+
+procedure GravarAlteracoes;
+begin
+  if (dmDadosPrincipal.fdQueryClientes.State in [dsEdit, dsInsert]) then
+  begin
+    dmDadosPrincipal.fdTransactionClientes.StartTransaction;
+    dmDadosPrincipal.fdQueryClientes.Post;
+    dmDadosPrincipal.fdTransactionClientes.CommitRetaining;
+  end;
+end;
+
+procedure CancelarTransacao;
+begin
+  if (dmDadosPrincipal.fdQueryClientes.State in [dsEdit, dsInsert]) then
+  begin
+    dmDadosPrincipal.fdQueryClientes.Cancel;
+    dmDadosPrincipal.fdTransactionClientes.RollbackRetaining;
+  end;
+end;
+
 end.
 
 

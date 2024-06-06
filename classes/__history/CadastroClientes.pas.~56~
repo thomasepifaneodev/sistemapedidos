@@ -1,0 +1,35 @@
+unit CadastroClientes;
+
+interface
+
+uses TSistema.Model.Conexao.Principal, Vcl.Dialogs, System.SysUtils;
+
+procedure InserirClientes;
+procedure ConsultarClientes;
+procedure AtualizarClientes;
+procedure CancelarTransacao;
+
+implementation
+
+procedure InserirClientes;
+begin
+
+end;
+procedure ConsultarClientes;
+begin
+
+end;
+procedure AtualizarClientes;
+begin
+
+end;
+procedure CancelarTransacao;
+begin
+
+end;
+
+
+end.
+
+
+

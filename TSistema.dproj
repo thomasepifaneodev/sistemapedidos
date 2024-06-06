@@ -119,7 +119,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="src\Model\TSistema.Model.Conexao.Principal.pas">
-            <Form>dmDados</Form>
+            <Form>dmDadosPrincipal</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

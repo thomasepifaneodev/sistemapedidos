@@ -1,6 +1,6 @@
-object dmDados: TdmDados
-  Height = 480
-  Width = 883
+object dmDadosPrincipal: TdmDadosPrincipal
+  Height = 443
+  Width = 588
   object fdConnection: TFDConnection
     Params.Strings = (
       'Database=base_pedidos'
@@ -10,12 +10,12 @@ object dmDados: TdmDados
       'DriverID=PG')
     Connected = True
     LoginPrompt = False
-    Left = 40
+    Left = 56
     Top = 24
   end
   object fdPgLink: TFDPhysPgDriverLink
     VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\exe'
-    Left = 112
+    Left = 128
     Top = 24
   end
   object fdQueryClientes: TFDQuery
@@ -25,13 +25,14 @@ object dmDados: TdmDados
     UpdateOptions.GeneratorName = 'clientes_id_seq'
     UpdateOptions.AutoIncFields = 'id'
     SQL.Strings = (
-      'SELECT * FROM clientes')
-    Left = 192
-    Top = 24
-    object fdQueryClientesid: TIntegerField
+      'SELECT * FROM clientes ORDER BY id')
+    Left = 56
+    Top = 88
+    object fdQueryClientesid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      IdentityInsert = True
     end
     object fdQueryClientesnome: TWideStringField
       FieldName = 'nome'
@@ -54,14 +55,14 @@ object dmDados: TdmDados
       Size = 80
     end
   end
+  object fdTransactionClientes: TFDTransaction
+    Connection = fdConnection
+    Left = 168
+    Top = 88
+  end
   object dataSourceClientes: TDataSource
     DataSet = fdQueryClientes
-    Left = 424
-    Top = 24
-  end
-  object fdQueryInserirClientes: TFDQuery
-    Connection = fdConnection
-    Left = 304
-    Top = 24
+    Left = 288
+    Top = 88
   end
 end

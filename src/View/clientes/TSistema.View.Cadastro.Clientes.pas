@@ -6,18 +6,21 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TSistema.Model.Conexao.Principal,
   TSistema.View.TelaCadastros.DadosInsertUpdate, Vcl.Buttons, Vcl.ExtCtrls,
-  Vcl.StdCtrls, CadastroClientes, Vcl.Mask, Vcl.DBCtrls, Data.DB;
+  Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Data.DB, CadastroClientes;
 
 type
   TfrmCadastroDadosCliente = class(TfrmCadastroDados)
-    edtNome: TDBEdit;
-    edtTelefone: TDBEdit;
-    edtEmail: TDBEdit;
-    lblCodigo: TDBText;
-    edtEndereco: TDBMemo;
-    procedure btn1SalvarClick(Sender: TObject);
-    procedure btn4SairClick(Sender: TObject);
+    lblNome: TLabel;
+    DBEdit2: TDBEdit;
+    lblTelefone: TLabel;
+    DBEdit3: TDBEdit;
+    lblEndereco: TLabel;
+    DBEdit4: TDBEdit;
+    lblEmail: TLabel;
+    DBEdit5: TDBEdit;
+    DBText1: TDBText;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btn1SalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,34 +38,22 @@ procedure TfrmCadastroDadosCliente.btn1SalvarClick(Sender: TObject);
 begin
   inherited;
   try
-    if dmDados.fdQueryClientes.State in [dsEdit, dsInsert] then
-    begin
-      dmDados.fdConnection.StartTransaction;
-      dmDados.fdQueryClientes.Post;
-      dmDados.fdConnection.CommitRetaining;
-      ShowMessage('Dados salvos com sucesso!');
-      Self.Close;
-    end;
+    CadastroClientes.GravarAlteracoes;
+    Application.MessageBox('Dados salvos com sucesso!', 'TSistema', MB_OK + MB_ICONINFORMATION);
+    Self.Close;
   except on e: Exception do
   begin
-    ShowMessage('Erro na inserção do cliente: ' + e.Message);
+    Application.MessageBox(PWideChar('Erro: ' + e.Message), 'TSistema', MB_OK + MB_ICONERROR);
   end;
   end;
-end;
 
-procedure TfrmCadastroDadosCliente.btn4SairClick(Sender: TObject);
-begin
-  inherited;
-  dmDados.fdConnection.RollbackRetaining;
-  dmDados.fdQueryClientes.Close();
 end;
 
 procedure TfrmCadastroDadosCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
-  dmDados.fdConnection.RollbackRetaining;
-  dmDados.fdQueryClientes.Close();
+  CadastroClientes.CancelarTransacao;
 end;
 
 end.

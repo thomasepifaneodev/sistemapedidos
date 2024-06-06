@@ -4,8 +4,8 @@ object frmCadastroDados: TfrmCadastroDados
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'frmCadastroDados'
-  ClientHeight = 487
-  ClientWidth = 763
+  ClientHeight = 485
+  ClientWidth = 755
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,8 +16,8 @@ object frmCadastroDados: TfrmCadastroDados
   TextHeight = 15
   object pnlBottom: TPanel
     Left = 0
-    Top = 448
-    Width = 763
+    Top = 446
+    Width = 755
     Height = 39
     Align = alBottom
     BevelOuter = bvNone
@@ -74,8 +74,8 @@ object frmCadastroDados: TfrmCadastroDados
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 763
-    Height = 448
+    Width = 755
+    Height = 446
     Align = alClient
     BevelOuter = bvNone
     Color = clTeal

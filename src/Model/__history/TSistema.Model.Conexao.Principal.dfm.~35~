@@ -1,0 +1,38 @@
+object dmDadosPrincipal: TdmDadosPrincipal
+  Height = 443
+  Width = 588
+  object fdConnection: TFDConnection
+    Params.Strings = (
+      'Database=base_pedidos'
+      'User_Name=postgres'
+      'Password=postzeus2011'
+      'Server=127.0.0.1'
+      'DriverID=PG')
+    LoginPrompt = False
+    Left = 56
+    Top = 24
+  end
+  object fdPgLink: TFDPhysPgDriverLink
+    VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\exe'
+    Left = 128
+    Top = 24
+  end
+  object fdConnectionClientes: TFDConnection
+    Left = 56
+    Top = 96
+  end
+  object fdQueryClientes: TFDQuery
+    Connection = fdConnectionClientes
+    Left = 168
+    Top = 96
+  end
+  object fdTransactionClientes: TFDTransaction
+    Connection = fdConnectionClientes
+    Left = 280
+    Top = 96
+  end
+  object dataSourceClientes: TDataSource
+    Left = 400
+    Top = 96
+  end
+end

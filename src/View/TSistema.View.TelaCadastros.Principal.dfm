@@ -18,6 +18,7 @@ object frmPrincipalCad: TfrmPrincipalCad
   Font.Style = []
   Position = poScreenCenter
   StyleName = 'Windows'
+  OnClose = FormClose
   TextHeight = 15
   object pnlBottom: TPanel
     Left = 0
@@ -118,9 +119,6 @@ object frmPrincipalCad: TfrmPrincipalCad
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 11
-      ExplicitTop = 21
-      ExplicitHeight = 34
     end
   end
   object dbGridPrincipal: TDBGrid

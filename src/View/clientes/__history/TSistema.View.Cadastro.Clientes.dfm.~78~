@@ -1,0 +1,173 @@
+inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 484
+  ClientWidth = 759
+  ExplicitWidth = 771
+  TextHeight = 15
+  inherited pnlBottom: TPanel
+    Top = 445
+    Width = 759
+    ExplicitWidth = 755
+    inherited btn4Sair: TSpeedButton
+      Left = 656
+      ExplicitLeft = 656
+    end
+  end
+  inherited pnlTop: TPanel
+    Width = 759
+    Height = 445
+    ExplicitLeft = 48
+    ExplicitTop = 8
+    ExplicitWidth = 759
+    object Label2: TLabel
+      Left = 55
+      Top = 131
+      Width = 31
+      Height = 15
+      Caption = 'nome'
+      FocusControl = DBEdit2
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clMoneyGreen
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 55
+      Top = 179
+      Width = 43
+      Height = 15
+      Caption = 'telefone'
+      FocusControl = DBEdit3
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clMoneyGreen
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 55
+      Top = 227
+      Width = 49
+      Height = 15
+      Caption = 'endereco'
+      FocusControl = DBEdit4
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clMoneyGreen
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 55
+      Top = 275
+      Width = 29
+      Height = 15
+      Caption = 'email'
+      FocusControl = DBEdit5
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clMoneyGreen
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+    end
+    object DBText1: TDBText
+      Left = 555
+      Top = 4
+      Width = 200
+      Height = 35
+      Alignment = taRightJustify
+      DataField = 'id'
+      DataSource = dmDadosPrincipal.dataSourceClientes
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clMoneyGreen
+      Font.Height = -24
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBEdit2: TDBEdit
+      Left = 55
+      Top = 147
+      Width = 650
+      Height = 35
+      AutoSize = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      CharCase = ecUpperCase
+      DataField = 'nome'
+      DataSource = dmDadosPrincipal.dataSourceClientes
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowFrame
+      Font.Height = -25
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object DBEdit3: TDBEdit
+      Left = 55
+      Top = 195
+      Width = 650
+      Height = 35
+      AutoSize = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      DataField = 'telefone'
+      DataSource = dmDadosPrincipal.dataSourceClientes
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowFrame
+      Font.Height = -25
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object DBEdit4: TDBEdit
+      Left = 55
+      Top = 243
+      Width = 650
+      Height = 35
+      AutoSize = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      CharCase = ecUpperCase
+      DataField = 'endereco'
+      DataSource = dmDadosPrincipal.dataSourceClientes
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowFrame
+      Font.Height = -25
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object DBEdit5: TDBEdit
+      Left = 55
+      Top = 291
+      Width = 650
+      Height = 35
+      AutoSize = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      CharCase = ecUpperCase
+      DataField = 'email'
+      DataSource = dmDadosPrincipal.dataSourceClientes
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowFrame
+      Font.Height = -25
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+end

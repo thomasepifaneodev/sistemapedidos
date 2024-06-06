@@ -11,13 +11,13 @@ uses
   FireDAC.Phys.PG;
 
 type
-  TdmDados = class(TDataModule)
+  TdmDadosPrincipal = class(TDataModule)
     fdConnection: TFDConnection;
     fdPgLink: TFDPhysPgDriverLink;
     fdQueryClientes: TFDQuery;
+    fdTransactionClientes: TFDTransaction;
     dataSourceClientes: TDataSource;
-    fdQueryInserirClientes: TFDQuery;
-    fdQueryClientesid: TIntegerField;
+    fdQueryClientesid: TFDAutoIncField;
     fdQueryClientesnome: TWideStringField;
     fdQueryClientestelefone: TWideStringField;
     fdQueryClientesendereco: TWideStringField;
@@ -29,7 +29,7 @@ type
   end;
 
 var
-  dmDados: TdmDados;
+  dmDadosPrincipal: TdmDadosPrincipal;
 
 implementation
 

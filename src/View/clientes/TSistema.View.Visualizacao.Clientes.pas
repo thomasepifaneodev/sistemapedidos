@@ -5,16 +5,17 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TSistema.View.TelaCadastros.Principal,
-  Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, TSistema.Model.Conexao.Principal,
-  TSistema.View.Cadastro.Clientes;
+  Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  TSistema.View.Cadastro.Clientes, CadastroClientes, TSistema.Model.Conexao.Principal;
 
 type
   TfrmPrincipalVisualizacaoClientes = class(TfrmPrincipalCad)
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure btn2ExibirClick(Sender: TObject);
-    procedure dbGridPrincipalDblClick(Sender: TObject);
     procedure btn1NovoClick(Sender: TObject);
+    procedure btn2ExibirClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btn3ExcluirClick(Sender: TObject);
+    procedure dbGridPrincipalDblClick(Sender: TObject);
     procedure edtSourceChange(Sender: TObject);
   private
     { Private declarations }
@@ -32,18 +33,15 @@ implementation
 procedure TfrmPrincipalVisualizacaoClientes.btn1NovoClick(Sender: TObject);
 begin
   inherited;
-  if not (dmDados.fdQueryClientes.State in [dsEdit, dsInsert]) then
-  begin
-    dmDados.fdQueryClientes.Open();
-    dmDados.fdQueryClientes.Insert;
-    frmCadastroDadosCliente.ShowModal;
-  end;
+  dbGridPrincipal.DataSource := nil;
+  CadastroClientes.InserirClientes;
+  frmCadastroDadosCliente.ShowModal;
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.btn2ExibirClick(Sender: TObject);
 begin
   inherited;
-  if not (dmDados.fdQueryClientes.IsEmpty) then
+  if not (dbGridPrincipal.DataSource = nil) then
   begin
     frmCadastroDadosCliente.ShowModal;
   end;
@@ -52,26 +50,12 @@ end;
 procedure TfrmPrincipalVisualizacaoClientes.btn3ExcluirClick(Sender: TObject);
 begin
   inherited;
-  if MessageDlg('Deseja realmente excluir?', mtConfirmation, [mbOK, mbCancel], 0) = mrOk then
+  if not (dbGridPrincipal.DataSource = nil) then
   begin
-    dmDados.fdConnection.StartTransaction;
-    try
-      if not dmDados.fdQueryClientes.IsEmpty then
-      begin
-        dmDados.fdQueryClientes.Delete;
-        dmDados.fdConnection.CommitRetaining;
-      end
-      else
-      begin
-        ShowMessage('Não há registros para excluir.');
-      end;
-    except
-      on e: Exception do
-      begin
-        dmDados.fdConnection.RollbackRetaining;
-        ShowMessage('Erro ao excluir registro: ' + e.Message);
-      end;
-    end;
+    if Application.MessageBox('Deseja realmente excluir o cliente?', 'TSistema', MB_YESNO + MB_ICONWARNING) = mrYes then
+  begin
+    CadastroClientes.ExcluirClientes;
+  end;
   end;
 end;
 
@@ -79,24 +63,34 @@ procedure TfrmPrincipalVisualizacaoClientes.dbGridPrincipalDblClick(
   Sender: TObject);
 begin
   inherited;
-  frmCadastroDadosCliente.ShowModal;
+    frmCadastroDadosCliente.ShowModal;
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.edtSourceChange(Sender: TObject);
 begin
   inherited;
-  if edtSource.Text <> '' then
+  if edtSource.Text	= '\' then
   begin
-    dmDados.fdQueryClientes.Open();
+    dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+  end
+  else
+  begin
+    dbGridPrincipal.DataSource := nil;
   end;
+
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
-    dmDados.fdConnection.RollbackRetaining;
-    dmDados.fdQueryClientes.Close()
+    CadastroClientes.CancelarTransacao;
 end;
 
+procedure TfrmPrincipalVisualizacaoClientes.FormCreate(Sender: TObject);
+begin
+  inherited;
+    dbGridPrincipal.DataSource := nil;
+    CadastroClientes.ConsultarClientes;
+end;
 end.

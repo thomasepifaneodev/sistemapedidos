@@ -18,6 +18,7 @@ type
     btn3Excluir: TSpeedButton;
     dbGridPrincipal: TDBGrid;
     procedure btn4SairClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -33,7 +34,12 @@ implementation
 
 procedure TfrmPrincipalCad.btn4SairClick(Sender: TObject);
 begin
-  Close;
+  Self.Close;
+end;
+
+procedure TfrmPrincipalCad.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  edtSource.Text := '';
 end;
 
 end.

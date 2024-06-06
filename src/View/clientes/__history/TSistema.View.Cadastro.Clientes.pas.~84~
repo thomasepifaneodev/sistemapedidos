@@ -1,0 +1,42 @@
+unit TSistema.View.Cadastro.Clientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TSistema.Model.Conexao.Principal,
+  TSistema.View.TelaCadastros.DadosInsertUpdate, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls, Data.DB, CadastroClientes;
+
+type
+  TfrmCadastroDadosCliente = class(TfrmCadastroDados)
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    DBText1: TDBText;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastroDadosCliente: TfrmCadastroDadosCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadastroDadosCliente.FormCreate(Sender: TObject);
+begin
+  inherited;
+  CadastroClientes.ConsultarClientes;
+end;
+
+end.

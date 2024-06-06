@@ -18,15 +18,39 @@
     <Transaction>2024/05/31 14:57:24.000.075,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.pas</Transaction>
     <Transaction>2024/05/31 14:57:24.000.075,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.dfm</Transaction>
     <Transaction>2024/05/31 14:59:50.000.392,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.pas</Transaction>
     <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.dfm</Transaction>
+    <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.pas</Transaction>
     <Transaction>2024/05/31 15:03:50.000.097,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 15:04:17.000.273,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Principal.pas</Transaction>
     <Transaction>2024/05/31 15:04:17.000.273,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Principal.dfm</Transaction>
     <Transaction>2024/05/31 15:41:24.000.637,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 17:24:12.000.539,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 17:24:24.000.238,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\classes\CadastroClientes.pas</Transaction>
+    <Transaction>2024/06/06 08:37:37.000.961,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/06 08:38:09.000.653,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/06/06 08:38:09.000.653,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/06 09:22:26.000.979,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.pas=</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="classes"/>
+    <File Path="classes\CadastroClientes.pas"/>
+    <File Path="src"/>
+    <File Path="src\Model"/>
+    <File Path="src\Model\TSistema.Model.Conexao.Principal.pas"/>
+    <File Path="src\Model\TSistema.Model.Conexao.Principal.dfm"/>
+    <File Path="src\View"/>
+    <File Path="src\View\clientes"/>
+    <File Path="src\View\clientes\TSistema.View.Cadastro.Clientes.pas"/>
+    <File Path="src\View\clientes\TSistema.View.Cadastro.Clientes.dfm"/>
+    <File Path="src\View\clientes\TSistema.View.Visualizacao.Clientes.pas"/>
+    <File Path="src\View\clientes\TSistema.View.Visualizacao.Clientes.dfm"/>
+    <File Path="src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.pas"/>
+    <File Path="src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.dfm"/>
+    <File Path="src\View\TSistema.View.TelaCadastros.Principal.pas"/>
+    <File Path="src\View\TSistema.View.TelaCadastros.Principal.dfm"/>
+    <File Path="src\View\TSistema.View.TelaPrincipal.pas"/>
+    <File Path="src\View\TSistema.View.TelaPrincipal.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>
