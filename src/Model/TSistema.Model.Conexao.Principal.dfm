@@ -4,17 +4,16 @@ object dmDadosPrincipal: TdmDadosPrincipal
   object fdConnection: TFDConnection
     Params.Strings = (
       'Database=base_pedidos'
-      'User_Name=postgres'
-      'Password=postzeus2011'
+      'User_Name=zeus'
+      'Password=zeusii11'
       'Server=127.0.0.1'
       'DriverID=PG')
-    Connected = True
     LoginPrompt = False
     Left = 56
     Top = 24
   end
   object fdPgLink: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\exe'
+    VendorHome = 'C:\Users\thoma\Documents\sistemapedidos\exe'
     Left = 128
     Top = 24
   end

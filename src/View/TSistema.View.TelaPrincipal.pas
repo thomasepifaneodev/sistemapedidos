@@ -10,8 +10,9 @@ type
   TfrmPrincipal = class(TForm)
     mainMenu: TMainMenu;
     Cadastros1: TMenuItem;
-    Clientes: TMenuItem;
-    procedure ClientesClick(Sender: TObject);
+    clientes: TMenuItem;
+    fornecedores: TMenuItem;
+    procedure clientesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmPrincipal.ClientesClick(Sender: TObject);
+procedure TfrmPrincipal.clientesClick(Sender: TObject);
 begin
   frmPrincipalVisualizacaoClientes.ShowModal();
 end;

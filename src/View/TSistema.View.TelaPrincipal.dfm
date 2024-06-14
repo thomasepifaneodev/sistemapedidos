@@ -22,9 +22,12 @@ object frmPrincipal: TfrmPrincipal
     Top = 653
     object Cadastros1: TMenuItem
       Caption = 'Cadastros'
-      object Clientes: TMenuItem
+      object clientes: TMenuItem
         Caption = 'Clientes'
-        OnClick = ClientesClick
+        OnClick = clientesClick
+      end
+      object fornecedores: TMenuItem
+        Caption = 'Fornecedores'
       end
     end
   end

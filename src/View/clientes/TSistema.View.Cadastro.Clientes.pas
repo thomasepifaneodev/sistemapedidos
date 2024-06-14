@@ -11,14 +11,14 @@ uses
 type
   TfrmCadastroDadosCliente = class(TfrmCadastroDados)
     lblNome: TLabel;
-    DBEdit2: TDBEdit;
+    edtNome: TDBEdit;
     lblTelefone: TLabel;
-    DBEdit3: TDBEdit;
+    edtTelefone: TDBEdit;
     lblEndereco: TLabel;
-    DBEdit4: TDBEdit;
+    edtEndereco: TDBEdit;
     lblEmail: TLabel;
-    DBEdit5: TDBEdit;
-    DBText1: TDBText;
+    edtEmail: TDBEdit;
+    lblCodigo: TDBText;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btn1SalvarClick(Sender: TObject);
   private

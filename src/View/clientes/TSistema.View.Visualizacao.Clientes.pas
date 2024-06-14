@@ -33,6 +33,7 @@ implementation
 procedure TfrmPrincipalVisualizacaoClientes.btn1NovoClick(Sender: TObject);
 begin
   inherited;
+  edtSource.Text := '';
   dbGridPrincipal.DataSource := nil;
   CadastroClientes.InserirClientes;
   frmCadastroDadosCliente.ShowModal;
@@ -63,13 +64,20 @@ procedure TfrmPrincipalVisualizacaoClientes.dbGridPrincipalDblClick(
   Sender: TObject);
 begin
   inherited;
+  if not (dbGridPrincipal.DataSource = nil) then
+  begin
     frmCadastroDadosCliente.ShowModal;
+  end;
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.edtSourceChange(Sender: TObject);
 begin
   inherited;
   if edtSource.Text	= '\' then
+  begin
+    dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+  end
+  else if (edtSource.Text <> '') and  (edtSource.Text <> '\') then
   begin
     dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
   end

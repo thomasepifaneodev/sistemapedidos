@@ -1,13 +1,11 @@
 inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
   Caption = 'Cadastro de Clientes'
-  ClientHeight = 484
   ClientWidth = 759
   OnClose = FormClose
   ExplicitWidth = 771
   ExplicitHeight = 522
   TextHeight = 15
   inherited pnlBottom: TPanel
-    Top = 445
     Width = 759
     ExplicitTop = 444
     ExplicitWidth = 755
@@ -21,15 +19,15 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
   end
   inherited pnlTop: TPanel
     Width = 759
-    Height = 445
+    ExplicitWidth = 755
     ExplicitHeight = 444
     object lblNome: TLabel
       Left = 55
       Top = 66
-      Width = 69
-      Height = 33
+      Width = 63
+      Height = 27
       Caption = 'Nome'
-      FocusControl = DBEdit2
+      FocusControl = edtNome
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clNavy
       Font.Height = -24
@@ -40,10 +38,10 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblTelefone: TLabel
       Left = 55
       Top = 143
-      Width = 97
-      Height = 33
+      Width = 90
+      Height = 27
       Caption = 'Telefone'
-      FocusControl = DBEdit3
+      FocusControl = edtTelefone
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clNavy
       Font.Height = -24
@@ -54,10 +52,10 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblEndereco: TLabel
       Left = 55
       Top = 221
-      Width = 108
-      Height = 33
+      Width = 103
+      Height = 27
       Caption = 'Endere'#231'o'
-      FocusControl = DBEdit4
+      FocusControl = edtEndereco
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clNavy
       Font.Height = -24
@@ -69,9 +67,9 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Left = 55
       Top = 299
       Width = 68
-      Height = 33
+      Height = 27
       Caption = 'E-mail'
-      FocusControl = DBEdit5
+      FocusControl = edtEmail
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clNavy
       Font.Height = -24
@@ -79,7 +77,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Font.Style = []
       ParentFont = False
     end
-    object DBText1: TDBText
+    object lblCodigo: TDBText
       Left = 555
       Top = 4
       Width = 200
@@ -94,7 +92,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object DBEdit2: TDBEdit
+    object edtNome: TDBEdit
       Left = 55
       Top = 97
       Width = 650
@@ -114,7 +112,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       ParentFont = False
       TabOrder = 0
     end
-    object DBEdit3: TDBEdit
+    object edtTelefone: TDBEdit
       Left = 55
       Top = 175
       Width = 650
@@ -133,7 +131,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       ParentFont = False
       TabOrder = 1
     end
-    object DBEdit4: TDBEdit
+    object edtEndereco: TDBEdit
       Left = 55
       Top = 253
       Width = 650
@@ -153,7 +151,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       ParentFont = False
       TabOrder = 2
     end
-    object DBEdit5: TDBEdit
+    object edtEmail: TDBEdit
       Left = 55
       Top = 331
       Width = 650
