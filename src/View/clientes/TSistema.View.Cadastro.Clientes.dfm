@@ -1,13 +1,15 @@
 inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
   Caption = 'Cadastro de Clientes'
+  ClientHeight = 485
   ClientWidth = 759
   OnClose = FormClose
+  OnShow = FormShow
   ExplicitWidth = 771
-  ExplicitHeight = 522
   TextHeight = 15
   inherited pnlBottom: TPanel
+    Top = 446
     Width = 759
-    ExplicitTop = 444
+    ExplicitTop = 445
     ExplicitWidth = 755
     inherited btn4Sair: TSpeedButton
       Left = 656
@@ -16,16 +18,20 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     inherited btn1Salvar: TSpeedButton
       OnClick = btn1SalvarClick
     end
+    inherited btn2Editar: TSpeedButton
+      OnClick = btn2EditarClick
+    end
   end
   inherited pnlTop: TPanel
     Width = 759
+    Height = 446
     ExplicitWidth = 755
-    ExplicitHeight = 444
+    ExplicitHeight = 445
     object lblNome: TLabel
       Left = 55
       Top = 66
-      Width = 63
-      Height = 27
+      Width = 69
+      Height = 33
       Caption = 'Nome'
       FocusControl = edtNome
       Font.Charset = DEFAULT_CHARSET
@@ -38,8 +44,8 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblTelefone: TLabel
       Left = 55
       Top = 143
-      Width = 90
-      Height = 27
+      Width = 97
+      Height = 33
       Caption = 'Telefone'
       FocusControl = edtTelefone
       Font.Charset = DEFAULT_CHARSET
@@ -52,8 +58,8 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblEndereco: TLabel
       Left = 55
       Top = 221
-      Width = 103
-      Height = 27
+      Width = 108
+      Height = 33
       Caption = 'Endere'#231'o'
       FocusControl = edtEndereco
       Font.Charset = DEFAULT_CHARSET
@@ -67,7 +73,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Left = 55
       Top = 299
       Width = 68
-      Height = 27
+      Height = 33
       Caption = 'E-mail'
       FocusControl = edtEmail
       Font.Charset = DEFAULT_CHARSET
@@ -105,7 +111,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       DataField = 'nome'
       DataSource = dmDadosPrincipal.dataSourceClientes
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowFrame
+      Font.Color = clBlack
       Font.Height = -25
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -124,7 +130,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       DataField = 'telefone'
       DataSource = dmDadosPrincipal.dataSourceClientes
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowFrame
+      Font.Color = clBlack
       Font.Height = -25
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -144,7 +150,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       DataField = 'endereco'
       DataSource = dmDadosPrincipal.dataSourceClientes
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowFrame
+      Font.Color = clBlack
       Font.Height = -25
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -163,7 +169,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       DataField = 'email'
       DataSource = dmDadosPrincipal.dataSourceClientes
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowFrame
+      Font.Color = clBlack
       Font.Height = -25
       Font.Name = 'Segoe UI'
       Font.Style = []

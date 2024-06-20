@@ -21,8 +21,12 @@ type
     lblCodigo: TDBText;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btn1SalvarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btn2EditarClick(Sender: TObject);
   private
     { Private declarations }
+    procedure AtivarControles;
+    procedure DesativarControles;
   public
     { Public declarations }
   end;
@@ -33,6 +37,21 @@ var
 implementation
 
 {$R *.dfm}
+procedure TfrmCadastroDadosCliente.AtivarControles;
+begin
+  edtNome.Enabled := True;
+  edtTelefone.Enabled := True;
+  edtEndereco.Enabled := True;
+  edtEmail.Enabled := True;
+end;
+
+procedure TfrmCadastroDadosCliente.DesativarControles;
+begin
+  edtNome.Enabled := False;
+  edtTelefone.Enabled := False;
+  edtEndereco.Enabled := False;
+  edtEmail.Enabled := False;
+end;
 
 procedure TfrmCadastroDadosCliente.btn1SalvarClick(Sender: TObject);
 begin
@@ -49,11 +68,33 @@ begin
 
 end;
 
+procedure TfrmCadastroDadosCliente.btn2EditarClick(Sender: TObject);
+begin
+  inherited;
+  AtivarControles;
+  edtNome.SetFocus;
+end;
+
 procedure TfrmCadastroDadosCliente.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
   CadastroClientes.CancelarTransacao;
+end;
+
+procedure TfrmCadastroDadosCliente.FormShow(Sender: TObject);
+begin
+  inherited;
+  if (dmDadosPrincipal.fdQueryClientes.State in [dsInsert, dsEdit]) then
+  begin
+    AtivarControles;
+    edtNome.SetFocus;
+  end
+  else
+  begin
+    DesativarControles;
+  end;
+
 end;
 
 end.

@@ -13,7 +13,7 @@ object dmDadosPrincipal: TdmDadosPrincipal
     Top = 24
   end
   object fdPgLink: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\thoma\Documents\sistemapedidos\exe'
+    VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\exe'
     Left = 128
     Top = 24
   end
