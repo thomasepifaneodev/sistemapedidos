@@ -1,6 +1,9 @@
 inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsToolWindow
   Caption = 'Cadastro de Clientes'
   OnCreate = FormCreate
+  OnShow = FormShow
   TextHeight = 15
   inherited pnlBottom: TPanel
     inherited btn1Novo: TSpeedButton
@@ -18,6 +21,8 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
       CharCase = ecUpperCase
       Font.Name = 'Segoe UI'
       Font.Style = []
+      MaxLength = 80
+      TextHint = 'PESQUISAR PELO NOME'
       OnChange = edtSourceChange
     end
   end

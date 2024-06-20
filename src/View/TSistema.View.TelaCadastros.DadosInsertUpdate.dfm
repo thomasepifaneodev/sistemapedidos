@@ -26,12 +26,12 @@ object frmCadastroDados: TfrmCadastroDados
     TabOrder = 0
     TabStop = True
     StyleName = 'Windows'
-    ExplicitTop = 447
-    ExplicitWidth = 759
+    ExplicitTop = 445
+    ExplicitWidth = 751
     object btn4Sair: TSpeedButton
       Tag = 2
       AlignWithMargins = True
-      Left = 660
+      Left = 652
       Top = 3
       Width = 100
       Height = 33
@@ -82,7 +82,7 @@ object frmCadastroDados: TfrmCadastroDados
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
-    ExplicitWidth = 759
-    ExplicitHeight = 447
+    ExplicitWidth = 751
+    ExplicitHeight = 445
   end
 end

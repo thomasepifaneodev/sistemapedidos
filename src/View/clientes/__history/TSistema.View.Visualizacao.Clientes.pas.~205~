@@ -1,0 +1,115 @@
+unit TSistema.View.Visualizacao.Clientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TSistema.View.TelaCadastros.Principal,
+  Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  TSistema.View.Cadastro.Clientes, CadastroClientes, TSistema.Model.Conexao.Principal;
+
+type
+  TfrmPrincipalVisualizacaoClientes = class(TfrmPrincipalCad)
+    procedure btn1NovoClick(Sender: TObject);
+    procedure btn2ExibirClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btn3ExcluirClick(Sender: TObject);
+    procedure dbGridPrincipalDblClick(Sender: TObject);
+    procedure edtSourceChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipalVisualizacaoClientes.btn1NovoClick(Sender: TObject);
+begin
+  inherited;
+  edtSource.Text := '';
+  dbGridPrincipal.DataSource := nil;
+  CadastroClientes.InserirClientes;
+  frmCadastroDadosCliente.ShowModal;
+end;
+
+procedure TfrmPrincipalVisualizacaoClientes.btn2ExibirClick(Sender: TObject);
+begin
+  inherited;
+  if not (dbGridPrincipal.DataSource = nil) then
+  begin
+    frmCadastroDadosCliente.ShowModal;
+  end;
+end;
+
+procedure TfrmPrincipalVisualizacaoClientes.btn3ExcluirClick(Sender: TObject);
+begin
+  inherited;
+  if not (dbGridPrincipal.DataSource = nil) then
+  begin
+    if Application.MessageBox('Deseja realmente excluir o cliente?', 'TSistema', MB_YESNO + MB_ICONWARNING) = mrYes then
+  begin
+    CadastroClientes.ExcluirClientes;
+  end;
+  end;
+end;
+
+procedure TfrmPrincipalVisualizacaoClientes.dbGridPrincipalDblClick(
+  Sender: TObject);
+begin
+  inherited;
+  if not (dbGridPrincipal.DataSource = nil) then
+  begin
+    frmCadastroDadosCliente.ShowModal;
+  end;
+end;
+
+procedure TfrmPrincipalVisualizacaoClientes.edtSourceChange(Sender: TObject);
+var
+  FilterValue: string;
+begin
+  inherited;
+  if edtSource.Text = '\' then
+  begin
+    dmDadosPrincipal.fdQueryClientes.Filtered := False;
+    dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+  end
+  else if (edtSource.Text <> '\') and (edtSource.Text <> '') then
+  begin
+    dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+    dmDadosPrincipal.fdQueryClientes.Filter := 'nome LIKE ''%' + edtSource.Text + '%''';
+    dmDadosPrincipal.fdQueryClientes.Filtered := True;
+  end
+  else
+  begin
+    dbGridPrincipal.DataSource := nil;
+  end;
+end;
+
+procedure TfrmPrincipalVisualizacaoClientes.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+    CadastroClientes.CancelarTransacao;
+end;
+
+procedure TfrmPrincipalVisualizacaoClientes.FormCreate(Sender: TObject);
+begin
+  inherited;
+    dbGridPrincipal.DataSource := nil;
+    CadastroClientes.ConsultarClientes;
+end;
+procedure TfrmPrincipalVisualizacaoClientes.FormShow(Sender: TObject);
+begin
+  inherited;
+  edtSource.SetFocus;
+end;
+
+end.

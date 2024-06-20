@@ -29,10 +29,7 @@ implementation
 
 procedure TfrmCadastroDados.btn4SairClick(Sender: TObject);
 begin
-  if Application.MessageBox('Deseja realmente sair?', 'TSistema', MB_YESNO + MB_ICONWARNING) = mrYes then
-  begin
     Self.Close;
-  end;
 end;
 
 end.

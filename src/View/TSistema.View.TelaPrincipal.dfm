@@ -20,7 +20,7 @@ object frmPrincipal: TfrmPrincipal
     Left = 0
     Top = 0
     Width = 1099
-    Height = 73
+    Height = 81
     Align = alTop
     BevelOuter = bvNone
     Color = clWindow
@@ -28,11 +28,13 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 0
     object btnClientes: TSpeedButton
       AlignWithMargins = True
-      Left = 3
+      Left = 4
       Top = 10
-      Width = 80
-      Height = 53
+      Width = 90
+      Height = 61
+      Margins.Left = 4
       Margins.Top = 10
+      Margins.Right = 2
       Margins.Bottom = 10
       Align = alLeft
       BiDiMode = bdLeftToRight
@@ -45,16 +47,17 @@ object frmPrincipal: TfrmPrincipal
       ParentBiDiMode = False
       Spacing = -3
       OnClick = btnClientesClick
-      ExplicitTop = 5
-      ExplicitHeight = 56
+      ExplicitLeft = 3
     end
     object btnFornecedores: TSpeedButton
       AlignWithMargins = True
-      Left = 89
+      Left = 100
       Top = 10
-      Width = 80
-      Height = 53
+      Width = 90
+      Height = 61
+      Margins.Left = 4
       Margins.Top = 10
+      Margins.Right = 2
       Margins.Bottom = 10
       Align = alLeft
       BiDiMode = bdLeftToRight
@@ -66,9 +69,205 @@ object frmPrincipal: TfrmPrincipal
       NumGlyphs = 4
       ParentBiDiMode = False
       Spacing = -3
-      ExplicitLeft = 69
-      ExplicitTop = 5
-      ExplicitHeight = 56
+      ExplicitLeft = 99
+    end
+    object SpeedButton2: TSpeedButton
+      AlignWithMargins = True
+      Left = 388
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 387
+    end
+    object SpeedButton3: TSpeedButton
+      AlignWithMargins = True
+      Left = 484
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 483
+    end
+    object SpeedButton4: TSpeedButton
+      AlignWithMargins = True
+      Left = 580
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 579
+    end
+    object SpeedButton5: TSpeedButton
+      AlignWithMargins = True
+      Left = 676
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 675
+    end
+    object SpeedButton6: TSpeedButton
+      AlignWithMargins = True
+      Left = 772
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 771
+    end
+    object SpeedButton7: TSpeedButton
+      AlignWithMargins = True
+      Left = 868
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 867
+    end
+    object SpeedButton8: TSpeedButton
+      AlignWithMargins = True
+      Left = 964
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 963
+    end
+    object SpeedButton10: TSpeedButton
+      AlignWithMargins = True
+      Left = 196
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 195
+    end
+    object SpeedButton11: TSpeedButton
+      AlignWithMargins = True
+      Left = 292
+      Top = 10
+      Width = 90
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 10
+      Margins.Right = 2
+      Margins.Bottom = 10
+      Align = alLeft
+      BiDiMode = bdLeftToRight
+      Caption = 'Fornecedores'
+      ImageIndex = 1
+      Images = imgList
+      Layout = blGlyphTop
+      Margin = 1
+      NumGlyphs = 4
+      ParentBiDiMode = False
+      Spacing = -3
+      ExplicitLeft = 291
     end
   end
   object imgList: TImageList

@@ -1,0 +1,45 @@
+unit TSistema.View.TelaPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, TSistema.View.Visualizacao.Clientes,
+  System.ImageList, Vcl.ImgList, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    pnlTop: TPanel;
+    btnClientes: TSpeedButton;
+    imgList: TImageList;
+    btnFornecedores: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    SpeedButton11: TSpeedButton;
+    procedure btnClientesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
+begin
+  frmPrincipalVisualizacaoClientes.ShowModal();
+end;
+end.

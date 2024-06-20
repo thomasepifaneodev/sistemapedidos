@@ -1,15 +1,19 @@
 inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
+  BorderStyle = bsToolWindow
   Caption = 'Cadastro de Clientes'
-  ClientWidth = 759
+  ClientHeight = 495
+  ClientWidth = 763
   OnClose = FormClose
   OnShow = FormShow
   ExplicitWidth = 771
+  ExplicitHeight = 522
   TextHeight = 15
   inherited pnlBottom: TPanel
-    Width = 759
+    Top = 456
+    Width = 763
     ExplicitWidth = 755
     inherited btn4Sair: TSpeedButton
-      Left = 656
+      Left = 660
       ExplicitLeft = 656
     end
     inherited btn1Salvar: TSpeedButton
@@ -20,13 +24,14 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     end
   end
   inherited pnlTop: TPanel
-    Width = 759
+    Width = 763
+    Height = 456
     ExplicitWidth = 755
     object lblNome: TLabel
       Left = 55
       Top = 66
-      Width = 69
-      Height = 33
+      Width = 63
+      Height = 27
       Caption = 'Nome'
       FocusControl = edtNome
       Font.Charset = DEFAULT_CHARSET
@@ -39,8 +44,8 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblTelefone: TLabel
       Left = 55
       Top = 143
-      Width = 97
-      Height = 33
+      Width = 90
+      Height = 27
       Caption = 'Telefone'
       FocusControl = edtTelefone
       Font.Charset = DEFAULT_CHARSET
@@ -53,8 +58,8 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblEndereco: TLabel
       Left = 55
       Top = 221
-      Width = 108
-      Height = 33
+      Width = 103
+      Height = 27
       Caption = 'Endere'#231'o'
       FocusControl = edtEndereco
       Font.Charset = DEFAULT_CHARSET
@@ -68,7 +73,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Left = 55
       Top = 299
       Width = 68
-      Height = 33
+      Height = 27
       Caption = 'E-mail'
       FocusControl = edtEmail
       Font.Charset = DEFAULT_CHARSET

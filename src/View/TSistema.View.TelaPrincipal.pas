@@ -13,6 +13,15 @@ type
     btnClientes: TSpeedButton;
     imgList: TImageList;
     btnFornecedores: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    SpeedButton11: TSpeedButton;
     procedure btnClientesClick(Sender: TObject);
   private
     { Private declarations }
@@ -29,6 +38,11 @@ implementation
 
 procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
 begin
-  frmPrincipalVisualizacaoClientes.ShowModal();
+  frmPrincipalVisualizacaoClientes := TFrmPrincipalVisualizacaoClientes.Create(nil);
+  try
+    frmPrincipalVisualizacaoClientes.ShowModal();
+  finally
+    FreeAndNil(frmPrincipalVisualizacaoClientes);
+  end;
 end;
 end.

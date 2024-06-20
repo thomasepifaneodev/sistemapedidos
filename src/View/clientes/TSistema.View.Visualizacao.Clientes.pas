@@ -17,8 +17,10 @@ type
     procedure btn3ExcluirClick(Sender: TObject);
     procedure dbGridPrincipalDblClick(Sender: TObject);
     procedure edtSourceChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
+    procedure CriarFormulario;
   public
     { Public declarations }
   end;
@@ -36,7 +38,7 @@ begin
   edtSource.Text := '';
   dbGridPrincipal.DataSource := nil;
   CadastroClientes.InserirClientes;
-  frmCadastroDadosCliente.ShowModal;
+  CriarFormulario;
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.btn2ExibirClick(Sender: TObject);
@@ -44,7 +46,7 @@ begin
   inherited;
   if not (dbGridPrincipal.DataSource = nil) then
   begin
-    frmCadastroDadosCliente.ShowModal;
+    CriarFormulario;
   end;
 end;
 
@@ -60,13 +62,23 @@ begin
   end;
 end;
 
+procedure TfrmPrincipalVisualizacaoClientes.CriarFormulario;
+begin
+  frmCadastroDadosCliente := TFrmCadastroDadosCliente.Create(nil);
+  try
+    frmCadastroDadosCliente.ShowModal();
+  finally
+    FreeAndNil(frmCadastroDadosCliente);
+  end;
+end;
+
 procedure TfrmPrincipalVisualizacaoClientes.dbGridPrincipalDblClick(
   Sender: TObject);
 begin
   inherited;
   if not (dbGridPrincipal.DataSource = nil) then
   begin
-    frmCadastroDadosCliente.ShowModal;
+    CriarFormulario;
   end;
 end;
 
@@ -105,4 +117,10 @@ begin
     dbGridPrincipal.DataSource := nil;
     CadastroClientes.ConsultarClientes;
 end;
+procedure TfrmPrincipalVisualizacaoClientes.FormShow(Sender: TObject);
+begin
+  inherited;
+  edtSource.SetFocus;
+end;
+
 end.
