@@ -43,6 +43,8 @@ begin
   edtTelefone.Enabled := True;
   edtEndereco.Enabled := True;
   edtEmail.Enabled := True;
+  btn1Salvar.Enabled := True;
+  btn2Editar.Enabled := False;
 end;
 
 procedure TfrmCadastroDadosCliente.DesativarControles;
@@ -51,21 +53,29 @@ begin
   edtTelefone.Enabled := False;
   edtEndereco.Enabled := False;
   edtEmail.Enabled := False;
+  btn1Salvar.Enabled := False;
+  btn2Editar.Enabled := True;
 end;
 
 procedure TfrmCadastroDadosCliente.btn1SalvarClick(Sender: TObject);
 begin
   inherited;
-  try
-    CadastroClientes.GravarAlteracoes;
-    Application.MessageBox('Dados salvos com sucesso!', 'TSistema', MB_OK + MB_ICONINFORMATION);
-    Self.Close;
-  except on e: Exception do
+  if edtNome.Text = '' then
   begin
-    Application.MessageBox(PWideChar('Erro: ' + e.Message), 'TSistema', MB_OK + MB_ICONERROR);
+    Application.MessageBox('O campo nome é de preenchimento obrigatório!', 'TSistema', MB_OK + MB_ICONINFORMATION);
+  end
+  else
+  begin
+    try
+      CadastroClientes.GravarAlteracoes;
+      Application.MessageBox('Dados salvos com sucesso!', 'TSistema', MB_OK + MB_ICONINFORMATION);
+      Self.Close;
+    except on e: Exception do
+    begin
+      Application.MessageBox(PWideChar('Erro: ' + e.Message), 'TSistema', MB_OK + MB_ICONERROR);
+    end;
+    end;
   end;
-  end;
-
 end;
 
 procedure TfrmCadastroDadosCliente.btn2EditarClick(Sender: TObject);

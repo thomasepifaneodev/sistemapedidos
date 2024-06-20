@@ -15,6 +15,7 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
   end
   inherited pnlTop: TPanel
     inherited edtSource: TEdit
+      CharCase = ecUpperCase
       Font.Name = 'Segoe UI'
       Font.Style = []
       OnChange = edtSourceChange
@@ -30,7 +31,7 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
         Expanded = False
         FieldName = 'id'
         Title.Caption = 'C'#243'digo'
-        Width = 94
+        Width = 80
         Visible = True
       end
       item
@@ -44,7 +45,7 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
         Expanded = False
         FieldName = 'telefone'
         Title.Caption = 'Telefone'
-        Width = 220
+        Width = 217
         Visible = True
       end>
   end

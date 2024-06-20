@@ -71,21 +71,25 @@ begin
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.edtSourceChange(Sender: TObject);
+var
+  FilterValue: string;
 begin
   inherited;
-  if edtSource.Text	= '\' then
+  if edtSource.Text = '\' then
   begin
+    dmDadosPrincipal.fdQueryClientes.Filtered := False;
     dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
   end
-  else if (edtSource.Text <> '') and  (edtSource.Text <> '\') then
+  else if (edtSource.Text <> '\') and (edtSource.Text <> '') then
   begin
     dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+    dmDadosPrincipal.fdQueryClientes.Filter := 'nome LIKE ''%' + edtSource.Text + '%''';
+    dmDadosPrincipal.fdQueryClientes.Filtered := True;
   end
   else
   begin
     dbGridPrincipal.DataSource := nil;
   end;
-
 end;
 
 procedure TfrmPrincipalVisualizacaoClientes.FormClose(Sender: TObject;

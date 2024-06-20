@@ -1,15 +1,12 @@
 inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
   Caption = 'Cadastro de Clientes'
-  ClientHeight = 485
   ClientWidth = 759
   OnClose = FormClose
   OnShow = FormShow
   ExplicitWidth = 771
   TextHeight = 15
   inherited pnlBottom: TPanel
-    Top = 446
     Width = 759
-    ExplicitTop = 445
     ExplicitWidth = 755
     inherited btn4Sair: TSpeedButton
       Left = 656
@@ -24,9 +21,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
   end
   inherited pnlTop: TPanel
     Width = 759
-    Height = 446
     ExplicitWidth = 755
-    ExplicitHeight = 445
     object lblNome: TLabel
       Left = 55
       Top = 66
