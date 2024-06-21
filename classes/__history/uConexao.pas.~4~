@@ -1,0 +1,41 @@
+unit uConexao;
+
+interface
+
+uses TSistema.Model.Conexao.Principal, uLib, System.SysUtils, Vcl.Forms,
+  Vcl.Controls;
+
+procedure LoginUser(User, Pass : String);
+function ReturnForm(Acao: TModalResult) : TModalResult;
+
+implementation
+
+procedure LoginUser(User, Pass : String);
+var
+  vFileName : String;
+begin
+    dmDadosPrincipal.fdPgLink.VendorHome := ExtractFilePath(Application.ExeName);
+    vFileName := ExtractFilePath(Application.ExeName) + 'TSistema.ini';
+
+    dmDadosPrincipal.fdConnection.Params.Clear;
+    dmDadosPrincipal.fdConnection.Params.Add('DriverID=PG');
+    dmDadosPrincipal.fdConnection.Params.Add('Database=' + GetValorIni(vFileName, 'CONFIGURACAO', 'BASE'));
+    dmDadosPrincipal.fdConnection.Params.Add('Port=' + GetValorIni(vFileName, 'CONFIGURACAO', 'PORTA'));
+    dmDadosPrincipal.fdConnection.Params.Add('Server=' + GetValorIni(vFileName, 'CONFIGURACAO', 'IP'));
+    dmDadosPrincipal.fdConnection.Params.Add('LoginTimeout=1');
+
+    dmDadosPrincipal.fdConnection.Params.UserName := User;
+    dmDadosPrincipal.fdConnection.Params.Password := Pass;
+
+  try
+    dmDadosPrincipal.fdConnection.Connected := True;
+  finally
+
+  end;
+end;
+
+function ReturnForm(Acao: TModalResult) : TModalResult;
+begin
+  Result := Acao;
+end;
+end.

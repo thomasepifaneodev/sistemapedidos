@@ -22,7 +22,7 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
       Font.Name = 'Segoe UI'
       Font.Style = []
       MaxLength = 80
-      TextHint = 'PESQUISAR PELO NOME'
+      TextHint = 'Pesquisar pelo nome'
       OnChange = edtSourceChange
     end
   end
@@ -35,6 +35,11 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
       item
         Expanded = False
         FieldName = 'id'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
         Title.Caption = 'C'#243'digo'
         Width = 80
         Visible = True
@@ -42,6 +47,11 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
       item
         Expanded = False
         FieldName = 'nome'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
         Title.Caption = 'Nome'
         Width = 450
         Visible = True
@@ -49,6 +59,11 @@ inherited frmPrincipalVisualizacaoClientes: TfrmPrincipalVisualizacaoClientes
       item
         Expanded = False
         FieldName = 'telefone'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = [fsBold]
         Title.Caption = 'Telefone'
         Width = 217
         Visible = True

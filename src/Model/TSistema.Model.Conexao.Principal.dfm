@@ -1,19 +1,19 @@
 object dmDadosPrincipal: TdmDadosPrincipal
+  OnCreate = DataModuleCreate
   Height = 443
   Width = 588
   object fdConnection: TFDConnection
     Params.Strings = (
-      'Database=base_pedidos'
-      'User_Name=zeus'
-      'Password=zeusii11'
-      'Server=127.0.0.1'
+      'Server='
+      'Port='
       'DriverID=PG')
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
     LoginPrompt = False
     Left = 56
     Top = 24
   end
   object fdPgLink: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\thoma\Documents\sistemapedidos\exe'
     Left = 128
     Top = 24
   end

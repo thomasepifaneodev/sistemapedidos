@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Phys.PGDef, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
   FireDAC.DApt, FireDAC.Comp.Client, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Phys.PG;
+  FireDAC.Phys.PG, Vcl.Forms, System.UITypes;
 
 type
   TdmDadosPrincipal = class(TDataModule)
@@ -22,6 +22,7 @@ type
     fdQueryClientestelefone: TWideStringField;
     fdQueryClientesendereco: TWideStringField;
     fdQueryClientesemail: TWideStringField;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,5 +37,10 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TdmDadosPrincipal.DataModuleCreate(Sender: TObject);
+begin
+  fdPgLink.VendorHome := ExtractFilePath(Application.ExeName);
+end;
 
 end.

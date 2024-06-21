@@ -1,0 +1,26 @@
+unit uConexao;
+
+interface
+
+uses TSistema.Model.Conexao.Principal, uLib, System.SysUtils, Vcl.Forms;
+
+procedure LoginUser(User, Pass : String);
+
+implementation
+
+procedure LoginUser(User, Pass : String);
+var
+  vFileName : String;
+begin
+
+  dmDadosPrincipal.fdPgLink.VendorHome := ExtractFilePath(Application.ExeName);
+  vFileName := ExtractFilePath(Application.ExeName) + 'TSistema.ini';
+
+  dmDadosPrincipal.fdConnection.Params.Clear;
+  dmDadosPrincipal.fdConnection.Params.Add('DriverID=PG');
+  dmDadosPrincipal.fdConnection.Params.Add('Database=' + GetValorIni(vFileName, 'CONFIGURACAO', 'BASE'));
+  dmDadosPrincipal.fdConnection.Params.Add('Port=' + GetValorIni(vFileName, 'CONFIGURACAO', 'PORTA'));
+  dmDadosPrincipal.fdConnection.Params.Add('Server=' + GetValorIni(vFileName, 'CONFIGURACAO', 'IP'));
+  dmDadosPrincipal.fdConnection.Params.Add('LoginTimeout=2');
+end;
+end.

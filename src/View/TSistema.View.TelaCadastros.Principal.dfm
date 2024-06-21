@@ -6,7 +6,7 @@ object frmPrincipalCad: TfrmPrincipalCad
   Caption = 'frmPrincipalCad'
   ClientHeight = 511
   ClientWidth = 784
-  Color = clTeal
+  Color = clMedGray
   Constraints.MaxHeight = 550
   Constraints.MaxWidth = 800
   Constraints.MinHeight = 550
@@ -27,7 +27,7 @@ object frmPrincipalCad: TfrmPrincipalCad
     Height = 39
     Align = alBottom
     BevelOuter = bvNone
-    Color = clTeal
+    Color = clMedGray
     ParentBackground = False
     TabOrder = 0
     TabStop = True
@@ -41,7 +41,7 @@ object frmPrincipalCad: TfrmPrincipalCad
       Height = 33
       Margins.Left = 5
       Align = alRight
-      Caption = 'Sair'
+      Caption = 'S&air'
       OnClick = btn4SairClick
       ExplicitLeft = 120
       ExplicitTop = 8
@@ -55,7 +55,7 @@ object frmPrincipalCad: TfrmPrincipalCad
       Height = 33
       Margins.Right = 5
       Align = alLeft
-      Caption = 'Novo'
+      Caption = '&Novo'
       ExplicitLeft = 120
       ExplicitTop = 8
       ExplicitHeight = 30
@@ -70,7 +70,7 @@ object frmPrincipalCad: TfrmPrincipalCad
       Margins.Left = 5
       Margins.Right = 5
       Align = alLeft
-      Caption = 'Exibir'
+      Caption = '&Exibir'
       ExplicitLeft = 225
       ExplicitTop = 6
     end
@@ -84,7 +84,7 @@ object frmPrincipalCad: TfrmPrincipalCad
       Margins.Left = 5
       Margins.Right = 5
       Align = alLeft
-      Caption = 'Excluir'
+      Caption = 'E&xcluir'
       ExplicitLeft = 267
       ExplicitTop = 6
     end
@@ -96,7 +96,7 @@ object frmPrincipalCad: TfrmPrincipalCad
     Height = 81
     Align = alTop
     BevelOuter = bvNone
-    Color = clTeal
+    Color = clMedGray
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'
@@ -130,7 +130,7 @@ object frmPrincipalCad: TfrmPrincipalCad
     Align = alClient
     BorderStyle = bsNone
     DrawingStyle = gdsGradient
-    GradientEndColor = clTeal
+    GradientEndColor = clSilver
     GradientStartColor = clSkyBlue
     Font.Charset = ANSI_CHARSET
     Font.Color = clTeal
