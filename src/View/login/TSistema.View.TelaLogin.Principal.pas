@@ -71,7 +71,11 @@ if (edtUsuario.Text = '') or (edtPass.Text = '')	 then
       LoginUser(edtUsuario.Text, edtPass.Text);
     if dmDadosPrincipal.fdConnection.Connected then
     begin
+<<<<<<< HEAD
       Self.Close;
+=======
+      Close;
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     end;
   except on e: Exception do
   begin

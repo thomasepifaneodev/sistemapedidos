@@ -8,31 +8,45 @@
     <Transaction>2024/04/29 11:38:25.000.410,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2024/04/29 11:49:37.000.427,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2024/05/28 15:57:55.000.692,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/05/28 15:58:33.000.191,C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaPrincipal.dfm</Transaction>
-    <Transaction>2024/05/28 15:58:33.000.191,C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaPrincipal.pas</Transaction>
-    <Transaction>2024/05/28 15:58:41.000.157,C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Usuario\Documents\ProgramaPedidos\TSistema.dproj</Transaction>
+    <Transaction>2024/05/28 15:58:33.000.191,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaPrincipal.dfm=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/05/28 15:58:33.000.191,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaPrincipal.pas=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/05/28 15:58:41.000.157,C:\Users\Usuario\Documents\ProgramaPedidos\TSistema.dproj=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2024/05/31 14:28:06.000.335,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/05/31 14:29:44.000.016,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.Principal.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
-    <Transaction>2024/05/31 14:29:44.000.016,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.Principal.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/05/31 14:29:44.000.016,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.Principal.dfm</Transaction>
+    <Transaction>2024/05/31 14:29:44.000.016,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.Principal.pas</Transaction>
     <Transaction>2024/05/31 14:54:19.000.657,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>2024/05/31 14:57:24.000.075,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 14:57:24.000.075,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
     <Transaction>2024/05/31 14:59:50.000.392,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+=======
+    <Transaction>2024/05/31 14:57:24.000.075,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.dfm</Transaction>
+    <Transaction>2024/05/31 14:57:24.000.075,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.pas</Transaction>
+    <Transaction>2024/05/31 14:59:50.000.392,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.pas</Transaction>
+    <Transaction>2024/05/31 15:00:14.000.008,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Visualizacao.Clientes.dfm</Transaction>
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     <Transaction>2024/05/31 15:03:50.000.097,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/05/31 15:04:17.000.273,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Principal.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/05/31 15:04:17.000.273,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Principal.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/05/31 15:04:17.000.273,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Principal.dfm</Transaction>
+    <Transaction>2024/05/31 15:04:17.000.273,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Principal.pas</Transaction>
     <Transaction>2024/05/31 15:41:24.000.637,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.dfm</Transaction>
     <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.pas</Transaction>
+=======
+    <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/05/31 15:41:46.000.204,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\clientes\TSistema.View.Cadastro.Clientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     <Transaction>2024/05/31 17:24:12.000.539,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/05/31 17:24:24.000.238,C:\Users\Usuario\Documents\ProgramaPedidos\classes\CadastroClientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/05/31 17:24:24.000.238,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\classes\CadastroClientes.pas</Transaction>
     <Transaction>2024/06/06 08:37:37.000.961,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
-    <Transaction>2024/06/06 08:38:09.000.653,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.pas</Transaction>
-    <Transaction>2024/06/06 08:38:09.000.653,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.dfm</Transaction>
+    <Transaction>2024/06/06 08:38:09.000.653,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/06/06 08:38:09.000.653,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/06/06 09:22:26.000.979,C:\Users\Usuario\Documents\ProgramaPedidos\src\Model\TSistema.Model.Conexao.Clientes.pas=</Transaction>
     <Transaction>2024/06/21 11:27:19.000.121,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>2024/06/21 11:32:08.000.985,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\classes\uLib.pas</Transaction>
     <Transaction>2024/06/21 11:36:25.000.838,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/06/21 11:36:44.000.030,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\src\View\login\TSistema.View.TelaLogin.Principal.pas</Transaction>
@@ -49,13 +63,27 @@
     <Transaction>2024/06/22 09:51:13.000.032,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\produtos\TSistema.View.Cadastro.Produtos.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
     <Transaction>2024/06/22 09:59:08.000.475,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
     <Transaction>2024/06/22 10:00:41.000.692,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\classes\CadastroProdutos.pas</Transaction>
+=======
+    <Transaction>2024/06/21 11:32:08.000.985,C:\Users\Usuario\Documents\ProgramaPedidos\classes\uLib.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/21 11:36:25.000.838,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/21 11:36:44.000.030,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\login\TSistema.View.TelaLogin.Principal.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/06/21 11:36:44.000.030,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\login\TSistema.View.TelaLogin.Principal.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/21 14:54:27.000.745,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/21 14:54:43.000.373,C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas=C:\Users\Usuario\Documents\ProgramaPedidos\classes\uConexao.pas</Transaction>
+    <Transaction>2024/06/21 15:59:31.481,=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+    <Transaction>2024/06/21 16:01:19.217,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\login\TSistema.View.TelaLogin.Configuracao.dfm=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.dfm</Transaction>
+    <Transaction>2024/06/21 16:01:19.217,C:\Users\Usuario\Documents\ProgramaPedidos\src\View\login\TSistema.View.TelaLogin.Configuracao.pas=C:\Users\Usuario\Documents\ProgramaPedidos\Unit1.pas</Transaction>
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="classes"/>
     <File Path="classes\CadastroClientes.pas"/>
     <File Path="classes\uLib.pas"/>
     <File Path="classes\uConexao.pas"/>
+<<<<<<< HEAD
     <File Path="classes\CadastroProdutos.pas"/>
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     <File Path="src"/>
     <File Path="src\Model"/>
     <File Path="src\Model\TSistema.Model.Conexao.Principal.pas"/>
@@ -71,9 +99,12 @@
     <File Path="src\View\login\TSistema.View.TelaLogin.Principal.dfm"/>
     <File Path="src\View\login\TSistema.View.TelaLogin.Configuracao.pas"/>
     <File Path="src\View\login\TSistema.View.TelaLogin.Configuracao.dfm"/>
+<<<<<<< HEAD
     <File Path="src\View\produtos"/>
     <File Path="src\View\produtos\TSistema.View.Cadastro.Produtos.pas"/>
     <File Path="src\View\produtos\TSistema.View.Cadastro.Produtos.dfm"/>
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     <File Path="src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.pas"/>
     <File Path="src\View\TSistema.View.TelaCadastros.DadosInsertUpdate.dfm"/>
     <File Path="src\View\TSistema.View.TelaCadastros.Principal.pas"/>

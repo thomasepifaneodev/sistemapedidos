@@ -4,6 +4,7 @@ object dmDadosPrincipal: TdmDadosPrincipal
   Width = 588
   object fdConnection: TFDConnection
     Params.Strings = (
+<<<<<<< HEAD
       'Server=127.0.0.1'
       'Database=base_pedidos'
       'User_Name=thomas'
@@ -12,12 +13,22 @@ object dmDadosPrincipal: TdmDadosPrincipal
     ResourceOptions.AssignedValues = [rvSilentMode]
     ResourceOptions.SilentMode = True
     Connected = True
+=======
+      'Server='
+      'Port='
+      'DriverID=PG')
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     LoginPrompt = False
     Left = 56
     Top = 24
   end
   object fdPgLink: TFDPhysPgDriverLink
+<<<<<<< HEAD
     VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\sistemapedidos\exe'
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     Left = 128
     Top = 24
   end

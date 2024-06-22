@@ -139,11 +139,14 @@
             <Form>frmConfig</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+<<<<<<< HEAD
         <DCCReference Include="src\View\produtos\TSistema.View.Cadastro.Produtos.pas">
             <Form>frmPrincipalCadProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="classes\CadastroProdutos.pas"/>
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

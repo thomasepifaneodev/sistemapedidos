@@ -17,7 +17,11 @@ object frmConfig: TfrmConfig
   TextHeight = 15
   object edtIp: TLabeledEdit
     Left = 39
+<<<<<<< HEAD
     Top = 104
+=======
+    Top = 80
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     Width = 200
     Height = 30
     AutoSize = False
@@ -45,7 +49,11 @@ object frmConfig: TfrmConfig
   end
   object edtPorta: TLabeledEdit
     Left = 39
+<<<<<<< HEAD
     Top = 176
+=======
+    Top = 152
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     Width = 200
     Height = 30
     AutoSize = False
@@ -73,7 +81,11 @@ object frmConfig: TfrmConfig
   end
   object edtBase: TLabeledEdit
     Left = 39
+<<<<<<< HEAD
     Top = 256
+=======
+    Top = 232
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     Width = 200
     Height = 30
     AutoSize = False
@@ -101,7 +113,11 @@ object frmConfig: TfrmConfig
   end
   object btnSave: TBitBtn
     Left = 81
+<<<<<<< HEAD
     Top = 344
+=======
+    Top = 352
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     Width = 120
     Height = 35
     Caption = 'Salvar'

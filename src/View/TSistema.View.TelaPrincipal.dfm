@@ -62,7 +62,11 @@ object frmPrincipal: TfrmPrincipal
       Margins.Bottom = 10
       Align = alLeft
       BiDiMode = bdLeftToRight
+<<<<<<< HEAD
       Caption = '&Produtos'
+=======
+      Caption = 'Produtos'
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
       ImageIndex = 1
       Images = imgList
       Layout = blGlyphTop

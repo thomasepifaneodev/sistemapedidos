@@ -6,7 +6,11 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, TSistema.View.Visualizacao.Clientes,  uLib,
   System.ImageList, Vcl.ImgList, Vcl.Buttons, Vcl.ExtCtrls, TSistema.View.TelaLogin.Principal, uConexao,
+<<<<<<< HEAD
   TSistema.Model.Conexao.Principal, TSistema.View.TelaLogin.Configuracao, TSistema.View.Cadastro.Produtos;
+=======
+  TSistema.Model.Conexao.Principal, TSistema.View.TelaLogin.Configuracao;
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
 
 type
   TfrmPrincipal = class(TForm)
@@ -18,7 +22,10 @@ type
     btnUsuarios: TSpeedButton;
     procedure btnClientesClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+<<<<<<< HEAD
     procedure btnProdutosClick(Sender: TObject);
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
   private
     { Private declarations }
     procedure LogarSistema;
@@ -43,6 +50,7 @@ frmPrincipalVisualizacaoClientes := TFrmPrincipalVisualizacaoClientes.Create(nil
   end;
 end;
 
+<<<<<<< HEAD
 procedure TfrmPrincipal.btnProdutosClick(Sender: TObject);
 begin
 frmPrincipalCadProdutos := TFrmPrincipalCadProdutos.Create(nil);
@@ -53,6 +61,8 @@ frmPrincipalCadProdutos := TFrmPrincipalCadProdutos.Create(nil);
   end;
 end;
 
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
   LogarSistema;

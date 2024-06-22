@@ -12,9 +12,13 @@ uses
   uLib in 'classes\uLib.pas',
   TSistema.View.TelaLogin.Principal in 'src\View\login\TSistema.View.TelaLogin.Principal.pas' {frmLogin},
   uConexao in 'classes\uConexao.pas',
+<<<<<<< HEAD
   TSistema.View.TelaLogin.Configuracao in 'src\View\login\TSistema.View.TelaLogin.Configuracao.pas' {frmConfig},
   TSistema.View.Cadastro.Produtos in 'src\View\produtos\TSistema.View.Cadastro.Produtos.pas' {frmPrincipalCadProdutos},
   CadastroProdutos in 'classes\CadastroProdutos.pas';
+=======
+  TSistema.View.TelaLogin.Configuracao in 'src\View\login\TSistema.View.TelaLogin.Configuracao.pas' {frmConfig};
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
 
 {$R *.res}
 
@@ -24,6 +28,9 @@ begin
   Application.CreateForm(TdmDadosPrincipal, dmDadosPrincipal);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmConfig, frmConfig);
+<<<<<<< HEAD
   Application.CreateForm(TfrmPrincipalCadProdutos, frmPrincipalCadProdutos);
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
   Application.Run;
 end.

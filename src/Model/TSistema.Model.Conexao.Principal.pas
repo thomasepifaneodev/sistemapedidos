@@ -22,9 +22,12 @@ type
     fdQueryClientestelefone: TWideStringField;
     fdQueryClientesendereco: TWideStringField;
     fdQueryClientesemail: TWideStringField;
+<<<<<<< HEAD
     dataSourceProdutos: TDataSource;
     fdTransactionProdutos: TFDTransaction;
     fdQueryProdutos: TFDQuery;
+=======
+>>>>>>> a46487a500cb94f1c3e89ea5a7ba43e93470829c
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
