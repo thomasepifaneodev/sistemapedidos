@@ -1,0 +1,46 @@
+unit TSistema.Model.Conexao.Principal;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.PGDef, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Comp.Client, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Phys.PG, Vcl.Forms, System.UITypes;
+
+type
+  TdmDadosPrincipal = class(TDataModule)
+    fdConnection: TFDConnection;
+    fdPgLink: TFDPhysPgDriverLink;
+    fdQueryClientes: TFDQuery;
+    fdTransactionClientes: TFDTransaction;
+    dataSourceClientes: TDataSource;
+    fdQueryClientesid: TFDAutoIncField;
+    fdQueryClientesnome: TWideStringField;
+    fdQueryClientestelefone: TWideStringField;
+    fdQueryClientesendereco: TWideStringField;
+    fdQueryClientesemail: TWideStringField;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmDadosPrincipal: TdmDadosPrincipal;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TdmDadosPrincipal.DataModuleCreate(Sender: TObject);
+begin
+  fdPgLink.VendorHome := ExtractFilePath(Application.ExeName);
+end;
+
+end.

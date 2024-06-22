@@ -21,7 +21,7 @@ object frmCadastroDados: TfrmCadastroDados
     Height = 39
     Align = alBottom
     BevelOuter = bvNone
-    Color = clTeal
+    Color = clMedGray
     ParentBackground = False
     TabOrder = 0
     TabStop = True
@@ -37,8 +37,7 @@ object frmCadastroDados: TfrmCadastroDados
       Height = 33
       Margins.Left = 5
       Align = alRight
-      Caption = 'Sair'
-      OnClick = btn4SairClick
+      Caption = 'S&air'
       ExplicitLeft = 120
       ExplicitTop = 8
       ExplicitHeight = 30
@@ -51,7 +50,7 @@ object frmCadastroDados: TfrmCadastroDados
       Height = 33
       Margins.Right = 5
       Align = alLeft
-      Caption = 'Salvar'
+      Caption = '&Salvar'
       ExplicitLeft = 120
       ExplicitTop = 8
       ExplicitHeight = 30
@@ -66,7 +65,7 @@ object frmCadastroDados: TfrmCadastroDados
       Margins.Left = 5
       Margins.Right = 5
       Align = alLeft
-      Caption = 'Editar'
+      Caption = '&Editar'
       ExplicitLeft = 225
       ExplicitTop = 6
     end
@@ -78,7 +77,7 @@ object frmCadastroDados: TfrmCadastroDados
     Height = 446
     Align = alClient
     BevelOuter = bvNone
-    Color = clTeal
+    Color = clMedGray
     ParentBackground = False
     TabOrder = 1
     StyleName = 'Windows'

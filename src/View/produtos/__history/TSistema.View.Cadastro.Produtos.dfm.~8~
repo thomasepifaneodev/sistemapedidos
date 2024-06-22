@@ -1,0 +1,28 @@
+inherited frmPrincipalCadProdutos: TfrmPrincipalCadProdutos
+  Caption = 'Cadastro de Produtos'
+  TextHeight = 15
+  inherited pnlTop: TPanel
+    inherited edtSource: TEdit
+      OnChange = edtSourceChange
+    end
+  end
+  inherited dbGridPrincipal: TDBGrid
+    DataSource = dmDadosPrincipal.dataSourceProdutos
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'id'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        Visible = True
+      end>
+  end
+end

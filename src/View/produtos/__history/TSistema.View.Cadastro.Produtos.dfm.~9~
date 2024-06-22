@@ -1,0 +1,12 @@
+inherited frmPrincipalCadProdutos: TfrmPrincipalCadProdutos
+  Caption = 'Cadastro de Produtos'
+  TextHeight = 15
+  inherited pnlTop: TPanel
+    inherited edtSource: TEdit
+      OnChange = edtSourceChange
+    end
+  end
+  inherited dbGridPrincipal: TDBGrid
+    DataSource = dmDadosPrincipal.dataSourceProdutos
+  end
+end

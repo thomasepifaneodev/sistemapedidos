@@ -1,0 +1,55 @@
+object frmConfig: TfrmConfig
+  Left = 0
+  Top = 0
+  Caption = 'Tela de Configura'#231#227'o'
+  ClientHeight = 442
+  ClientWidth = 282
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object edtIp: TLabeledEdit
+    Left = 72
+    Top = 80
+    Width = 121
+    Height = 23
+    EditLabel.Width = 62
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Endere'#231'o IP'
+    TabOrder = 0
+    Text = ''
+  end
+  object edtPorta: TLabeledEdit
+    Left = 72
+    Top = 152
+    Width = 121
+    Height = 23
+    EditLabel.Width = 28
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Porta'
+    TabOrder = 1
+    Text = ''
+  end
+  object edtBase: TLabeledEdit
+    Left = 72
+    Top = 232
+    Width = 121
+    Height = 23
+    EditLabel.Width = 76
+    EditLabel.Height = 15
+    EditLabel.Caption = 'Base de Dados'
+    TabOrder = 2
+    Text = ''
+  end
+  object btnSave: TBitBtn
+    Left = 88
+    Top = 352
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 3
+  end
+end

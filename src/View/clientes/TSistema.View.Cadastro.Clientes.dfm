@@ -11,13 +11,19 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
   inherited pnlBottom: TPanel
     Top = 456
     Width = 763
+    ExplicitTop = 444
     ExplicitWidth = 755
     inherited btn4Sair: TSpeedButton
       Left = 660
+      OnClick = btn4SairClick
       ExplicitLeft = 656
     end
     inherited btn1Salvar: TSpeedButton
+      ParentFont = False
       OnClick = btn1SalvarClick
+      ExplicitLeft = 3
+      ExplicitTop = 6
+      ExplicitHeight = 33
     end
     inherited btn2Editar: TSpeedButton
       OnClick = btn2EditarClick
@@ -27,11 +33,12 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     Width = 763
     Height = 456
     ExplicitWidth = 755
+    ExplicitHeight = 444
     object lblNome: TLabel
       Left = 55
       Top = 66
-      Width = 63
-      Height = 27
+      Width = 69
+      Height = 33
       Caption = 'Nome'
       FocusControl = edtNome
       Font.Charset = DEFAULT_CHARSET
@@ -44,8 +51,8 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblTelefone: TLabel
       Left = 55
       Top = 143
-      Width = 90
-      Height = 27
+      Width = 97
+      Height = 33
       Caption = 'Telefone'
       FocusControl = edtTelefone
       Font.Charset = DEFAULT_CHARSET
@@ -58,8 +65,8 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
     object lblEndereco: TLabel
       Left = 55
       Top = 221
-      Width = 103
-      Height = 27
+      Width = 108
+      Height = 33
       Caption = 'Endere'#231'o'
       FocusControl = edtEndereco
       Font.Charset = DEFAULT_CHARSET
@@ -73,7 +80,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Left = 55
       Top = 299
       Width = 68
-      Height = 27
+      Height = 33
       Caption = 'E-mail'
       FocusControl = edtEmail
       Font.Charset = DEFAULT_CHARSET
@@ -117,12 +124,14 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Font.Style = []
       ParentFont = False
       TabOrder = 0
+      OnKeyPress = edtNomeKeyPress
     end
     object edtTelefone: TDBEdit
       Left = 55
       Top = 175
       Width = 650
       Height = 35
+      TabStop = False
       AutoSize = False
       BevelInner = bvNone
       BevelOuter = bvNone
@@ -135,7 +144,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 4
     end
     object edtEndereco: TDBEdit
       Left = 55
@@ -156,6 +165,7 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Font.Style = []
       ParentFont = False
       TabOrder = 2
+      OnKeyPress = edtEnderecoKeyPress
     end
     object edtEmail: TDBEdit
       Left = 55
@@ -175,6 +185,31 @@ inherited frmCadastroDadosCliente: TfrmCadastroDadosCliente
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnKeyPress = edtEmailKeyPress
+    end
+    object edtTelefoneMask: TMaskEdit
+      Left = 55
+      Top = 175
+      Width = 646
+      Height = 35
+      AutoSelect = False
+      AutoSize = False
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BorderStyle = bsNone
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -25
+      Font.Name = 'Segoe UI Semibold'
+      Font.Style = [fsBold]
+      MaxLength = 11
+      ParentFont = False
+      TabOrder = 1
+      Text = ''
+      OnChange = edtTelefoneMaskChange
+      OnEnter = edtTelefoneMaskEnter
+      OnExit = edtTelefoneMaskExit
+      OnKeyPress = edtTelefoneMaskKeyPress
     end
   end
 end

@@ -84,8 +84,8 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <DCC_ExeOutput>C:\Users\thoma\Documents\sistemapedidos\exe\</DCC_ExeOutput>
-        <DCC_DcuOutput>C:\Users\thoma\Documents\sistemapedidos\dcu\</DCC_DcuOutput>
+        <DCC_ExeOutput>C:\Users\Usuario\Documents\ProgramaPedidos\exe\</DCC_ExeOutput>
+        <DCC_DcuOutput>C:\Users\Usuario\Documents\ProgramaPedidos\dcu\</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>TSistema_Icon2.ico</Icon_MainIcon>
@@ -129,6 +129,21 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="classes\CadastroClientes.pas"/>
+        <DCCReference Include="classes\uLib.pas"/>
+        <DCCReference Include="src\View\login\TSistema.View.TelaLogin.Principal.pas">
+            <Form>frmLogin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="classes\uConexao.pas"/>
+        <DCCReference Include="src\View\login\TSistema.View.TelaLogin.Configuracao.pas">
+            <Form>frmConfig</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\View\produtos\TSistema.View.Cadastro.Produtos.pas">
+            <Form>frmPrincipalCadProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="classes\CadastroProdutos.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

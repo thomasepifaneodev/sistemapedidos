@@ -1,0 +1,48 @@
+unit TSistema.View.Cadastro.Produtos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TSistema.View.TelaCadastros.Principal,
+  Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, CadastroProdutos, TSistema.Model.Conexao.Principal;
+
+type
+  TfrmPrincipalCadProdutos = class(TfrmPrincipalCad)
+    procedure edtSourceChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipalCadProdutos: TfrmPrincipalCadProdutos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipalCadProdutos.edtSourceChange(Sender: TObject);
+var
+  FilterValue: string;
+begin
+  inherited;
+  if edtSource.Text = '\' then
+  begin
+    dmDadosPrincipal.fdQueryClientes.Filtered := False;
+    dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+  end
+  else if (edtSource.Text <> '\') and (edtSource.Text <> '') then
+  begin
+    dbGridPrincipal.DataSource := dmDadosPrincipal.dataSourceClientes;
+    dmDadosPrincipal.fdQueryClientes.Filter := 'nome LIKE ''%' + edtSource.Text + '%''';
+    dmDadosPrincipal.fdQueryClientes.Filtered := True;
+  end
+  else
+  begin
+    dbGridPrincipal.DataSource := nil;
+  end;
+end;
+
+end.

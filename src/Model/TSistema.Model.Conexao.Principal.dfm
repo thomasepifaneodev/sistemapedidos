@@ -1,19 +1,23 @@
 object dmDadosPrincipal: TdmDadosPrincipal
+  OnCreate = DataModuleCreate
   Height = 443
   Width = 588
   object fdConnection: TFDConnection
     Params.Strings = (
-      'Database=base_pedidos'
-      'User_Name=zeus'
-      'Password=zeusii11'
       'Server=127.0.0.1'
+      'Database=base_pedidos'
+      'User_Name=thomas'
+      'Password=1'
       'DriverID=PG')
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    Connected = True
     LoginPrompt = False
     Left = 56
     Top = 24
   end
   object fdPgLink: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\thoma\Documents\sistemapedidos\exe'
+    VendorHome = 'C:\Users\Usuario\Documents\ProgramaPedidos\sistemapedidos\exe'
     Left = 128
     Top = 24
   end
@@ -63,5 +67,22 @@ object dmDadosPrincipal: TdmDadosPrincipal
     DataSet = fdQueryClientes
     Left = 288
     Top = 88
+  end
+  object dataSourceProdutos: TDataSource
+    DataSet = fdQueryProdutos
+    Left = 296
+    Top = 184
+  end
+  object fdTransactionProdutos: TFDTransaction
+    Connection = fdConnection
+    Left = 168
+    Top = 184
+  end
+  object fdQueryProdutos: TFDQuery
+    Connection = fdConnection
+    SQL.Strings = (
+      'SELECT * FROM produtos ORDER BY id')
+    Left = 48
+    Top = 184
   end
 end

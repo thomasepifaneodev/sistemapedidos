@@ -1,0 +1,114 @@
+object dmDadosPrincipal: TdmDadosPrincipal
+  OnCreate = DataModuleCreate
+  Height = 443
+  Width = 588
+  object fdConnection: TFDConnection
+    Params.Strings = (
+      'Server='
+      'Port='
+      'DriverID=PG')
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    LoginPrompt = False
+    Left = 56
+    Top = 24
+  end
+  object fdPgLink: TFDPhysPgDriverLink
+    Left = 128
+    Top = 24
+  end
+  object fdQueryClientes: TFDQuery
+    Connection = fdConnection
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'clientes_id_seq'
+    UpdateOptions.AutoIncFields = 'id'
+    SQL.Strings = (
+      'SELECT * FROM clientes ORDER BY id')
+    Left = 56
+    Top = 88
+    object fdQueryClientesid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      IdentityInsert = True
+    end
+    object fdQueryClientesnome: TWideStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 80
+    end
+    object fdQueryClientestelefone: TWideStringField
+      FieldName = 'telefone'
+      Origin = 'telefone'
+      Size = 30
+    end
+    object fdQueryClientesendereco: TWideStringField
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Size = 100
+    end
+    object fdQueryClientesemail: TWideStringField
+      FieldName = 'email'
+      Origin = 'email'
+      Size = 80
+    end
+  end
+  object fdTransactionClientes: TFDTransaction
+    Connection = fdConnection
+    Left = 168
+    Top = 88
+  end
+  object dataSourceClientes: TDataSource
+    DataSet = fdQueryClientes
+    Left = 288
+    Top = 88
+  end
+  object fdQueryProdutos: TFDQuery
+    Connection = fdConnection
+    UpdateOptions.AssignedValues = [uvFetchGeneratorsPoint, uvGeneratorName]
+    UpdateOptions.FetchGeneratorsPoint = gpImmediate
+    UpdateOptions.GeneratorName = 'produtos_id_seq'
+    UpdateOptions.AutoIncFields = 'id'
+    SQL.Strings = (
+      'SELECT * FROM produtos ORDER BY id')
+    Left = 56
+    Top = 144
+    object FDAutoIncField1: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      IdentityInsert = True
+    end
+    object WideStringField1: TWideStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 80
+    end
+    object WideStringField2: TWideStringField
+      FieldName = 'telefone'
+      Origin = 'telefone'
+      Size = 30
+    end
+    object WideStringField3: TWideStringField
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Size = 100
+    end
+    object WideStringField4: TWideStringField
+      FieldName = 'email'
+      Origin = 'email'
+      Size = 80
+    end
+  end
+  object fdTransactionProdutos: TFDTransaction
+    Connection = fdConnection
+    Left = 176
+    Top = 144
+  end
+  object dataSourceProdutos: TDataSource
+    DataSet = fdQueryProdutos
+    Left = 304
+    Top = 144
+  end
+end

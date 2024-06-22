@@ -4,27 +4,24 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, TSistema.View.Visualizacao.Clientes,
-  System.ImageList, Vcl.ImgList, Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, TSistema.View.Visualizacao.Clientes,  uLib,
+  System.ImageList, Vcl.ImgList, Vcl.Buttons, Vcl.ExtCtrls, TSistema.View.TelaLogin.Principal, uConexao,
+  TSistema.Model.Conexao.Principal, TSistema.View.TelaLogin.Configuracao, TSistema.View.Cadastro.Produtos;
 
 type
   TfrmPrincipal = class(TForm)
     pnlTop: TPanel;
     btnClientes: TSpeedButton;
     imgList: TImageList;
-    btnFornecedores: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
-    SpeedButton4: TSpeedButton;
-    SpeedButton5: TSpeedButton;
-    SpeedButton6: TSpeedButton;
-    SpeedButton7: TSpeedButton;
-    SpeedButton8: TSpeedButton;
-    SpeedButton10: TSpeedButton;
-    SpeedButton11: TSpeedButton;
+    btnProdutos: TSpeedButton;
+    btnPedidos: TSpeedButton;
+    btnUsuarios: TSpeedButton;
     procedure btnClientesClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnProdutosClick(Sender: TObject);
   private
     { Private declarations }
+    procedure LogarSistema;
   public
     { Public declarations }
   end;
@@ -38,11 +35,59 @@ implementation
 
 procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
 begin
-  frmPrincipalVisualizacaoClientes := TFrmPrincipalVisualizacaoClientes.Create(nil);
+frmPrincipalVisualizacaoClientes := TFrmPrincipalVisualizacaoClientes.Create(nil);
   try
     frmPrincipalVisualizacaoClientes.ShowModal();
   finally
     FreeAndNil(frmPrincipalVisualizacaoClientes);
   end;
+end;
+
+procedure TfrmPrincipal.btnProdutosClick(Sender: TObject);
+begin
+frmPrincipalCadProdutos := TFrmPrincipalCadProdutos.Create(nil);
+  try
+    frmPrincipalCadProdutos.ShowModal();
+  finally
+    FreeAndNil(frmPrincipalCadProdutos);
+  end;
+end;
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+  LogarSistema;
+end;
+procedure TfrmPrincipal.LogarSistema;
+begin
+if not ArquivoINIExiste(ExtractFilePath(Application.ExeName) + 'TSistema.ini') then
+  begin
+  MessageDlg('Arquivo de configuração não encontrado!', mtWarning, [mbOk], 0);
+  frmConfig := TFrmConfig.Create(nil);
+    try
+      frmConfig.ShowModal();
+    finally
+      FreeAndNil(frmConfig);
+    end;
+  end;
+  frmLogin := TFrmLogin.Create(nil);
+    try
+      frmLogin.ShowModal();
+      if dmDadosPrincipal.fdConnection.Connected then
+        begin
+          frmLogin.ModalResult := ReturnForm(mrOk);
+        end;
+      if frmLogin.ModalResult <> mrOk then
+      begin
+        Self.Close;
+        Application.Terminate;
+        frmPrincipal.Free;
+      end;
+      except
+      on e: Exception do
+      begin
+      ShowMessage(PWideChar(e.Message));
+      FreeAndNil(frmLogin);
+      end;
+    end;
 end;
 end.
